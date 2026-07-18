@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes - Nalomy</title>
+    <meta name="description"
+        content="Resolvé tus dudas sobre Mystic Box, Sets artesanales, envíos y formas de pago en Nalomy Uruguay.">
+    <link rel="icon" type="image/png" href="imagenes/android-chrome-192x192.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="faq">
+    <main>
+        <section id="faq-page" class="pagina-secundaria">
+            <h1 class="subt">Preguntas Frecuentes</h1>
+            <p class="intro-seccion">Toca una categoría para filtrar las preguntas, o explora todo desde aquí.</p>
+
+            <!-- ===== CATEGORÍAS ===== -->
+            <div class="faq-categorias" id="categorias">
+
+                <button class="faq-categoria" data-categoria="metodos-pago" aria-pressed="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M12.164 7.165c-1.15.191-1.702 1.233-1.231 2.328.498 1.155 1.921 1.895 3.094 1.603 1.039-.257 1.519-1.252 1.069-2.295-.471-1.095-1.784-1.827-2.932-1.636zm1.484 2.998l.104.229-.219.045-.097-.219c-.226.041-.482.035-.719-.027l-.065-.387c.195.03.438.058.623.02l.125-.041c.221-.109.152-.387-.176-.453-.245-.054-.893-.014-1.135-.552-.136-.304-.035-.621.356-.766l-.108-.239.217-.045.104.229c.159-.026.345-.036.563-.017l.087.383c-.17-.021-.353-.041-.512-.008l-.06.016c-.309.082-.21.375.064.446.453.105.994.139 1.208.612.173.385-.028.648-.36.774zm10.312 1.057l-3.766-8.22c-6.178 4.004-13.007-.318-17.951 4.454l3.765 8.22c5.298-4.492 12.519-.238 17.952-4.454zm-2.803-1.852c-.375.521-.653 1.117-.819 1.741-3.593 1.094-7.891-.201-12.018 1.241-.667-.354-1.503-.576-2.189-.556l-1.135-2.487c.432-.525.772-1.325.918-2.094 3.399-1.226 7.652.155 12.198-1.401.521.346 1.13.597 1.73.721l1.315 2.835zm2.843 5.642c-6.857 3.941-12.399-1.424-19.5 5.99l-4.5-9.97 1.402-1.463 3.807 8.406-.002.007c7.445-5.595 11.195-1.176 18.109-4.563.294.648.565 1.332.684 1.593z" />
+                    </svg>
+                    <span class="faq-categoria-titulo">Métodos de Pago</span>
+                </button>
+
+                <button class="faq-categoria" data-categoria="envios" aria-pressed="false">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd"
+                        aria-hidden="true">
+                        <path
+                            d="M7 24h-5v-9h5v1.735c.638-.198 1.322-.495 1.765-.689.642-.28 1.259-.417 1.887-.417 1.214 0 2.205.499 4.303 1.205.64.214 1.076.716 1.175 1.306 1.124-.863 2.92-2.257 2.937-2.27.357-.284.773-.434 1.2-.434.952 0 1.751.763 1.751 1.708 0 .49-.219.977-.627 1.356-1.378 1.28-2.445 2.233-3.387 3.074-.56.501-1.066.952-1.548 1.393-.749.687-1.518 1.006-2.421 1.006-.405 0-.832-.065-1.308-.2-2.773-.783-4.484-1.036-5.727-1.105v1.332zm-1-8h-3v7h3v-7zm1 5.664c2.092.118 4.405.696 5.999 1.147.817.231 1.761.354 2.782-.581 1.279-1.172 2.722-2.413 4.929-4.463.824-.765-.178-1.783-1.022-1.113 0 0-2.961 2.299-3.689 2.843-.379.285-.695.519-1.148.519-.107 0-.223-.013-.349-.042-.655-.151-1.883-.425-2.755-.701-.575-.183-.371-.993.268-.858.447.093 1.594.35 2.201.52 1.017.281 1.276-.867.422-1.152-.562-.19-.537-.198-1.889-.665-1.301-.451-2.214-.753-3.585-.156-.639.278-1.432.616-2.164.814v3.888zm3.79-19.913l3.21-1.751 7 3.86v7.677l-7 3.735-7-3.735v-7.719l3.784-2.064.002-.005.004.002zm2.71 6.015l-5.5-2.864v6.035l5.5 2.935v-6.106zm1 .001v6.105l5.5-2.935v-6l-5.5 2.83zm1.77-2.035l-5.47-2.848-2.202 1.202 5.404 2.813 2.268-1.167zm-4.412-3.425l5.501 2.864 2.042-1.051-5.404-2.979-2.139 1.166z" />
+                    </svg>
+                    <span class="faq-categoria-titulo">Envíos</span>
+                </button>
+
+                <button class="faq-categoria" data-categoria="seguridad" aria-pressed="false" id="btn-seguridad">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                        <path
+                            d="M12 0c-2.995 2.995-7.486 4-11 4 0 8.583 5.068 16.097 11 20 5.932-3.903 11-11.417 11-20-3.514 0-8.005-1.005-11-4zm-7.376 12h7.376v-9.356c2.965 2.238 6.457 3.004 8.912 3.25-.204 2.191-.755 4.236-1.536 6.106h-7.376v9.549c-2.771-2.111-5.643-5.4-7.376-9.549z" />
+                    </svg>
+                    <span class="faq-categoria-titulo">Políticas legales</span>
+                </button>
+
+            </div>
+
+            <!-- ===== PREGUNTAS ===== -->
+            <div id="lista-preguntas">
+
+                <details class="faq-item" data-categoria="productos">
+                    <summary class="faq-pregunta">
+                        <span>¿Qué es una Mystic Box?</span>
+                        <svg class="icono-plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            aria-hidden="true">
+                            <path
+                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm7 14h-5v5h-4v-5h-5v-4h5v-5h4v5h5v4z" />
+                        </svg>
+                    </summary>
+                    <div class="faq-respuesta">
+                        <p>Las Mystic Box de Nalomy son experiencias holísticas pensadas para acompañar procesos de
+                            bienestar emocional, equilibrio energético y autocuidado consciente. No se trata solo de un
+                            conjunto de productos, sino de una propuesta integral que combina joyería con piedras
+                            naturales, aromas, sahumerios y una guía ritual, para transformar momentos cotidianos en
+                            espacios de conexión interior.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item" data-categoria="productos">
+                    <summary class="faq-pregunta">
+                        <span>¿Qué incluye una Mystic Box?</span>
+                        <svg class="icono-plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            aria-hidden="true">
+                            <path
+                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm7 14h-5v5h-4v-5h-5v-4h5v-5h4v5h5v4z" />
+                        </svg>
+                    </summary>
+                    <div class="faq-respuesta">
+                        <p><strong>💎 Joyería:</strong> Piedras naturales seleccionadas por sus propiedades energéticas.
+                        </p>
+                        <p><strong>🔥 Elementos sensoriales:</strong> Quemador de sahumerios + varillas y hornito
+                            difusor con esencia.</p>
+                        <p><strong>📜 Guía ritual:</strong> Instrucciones de uso, propiedades de las piedras y un ritual
+                            simple para potenciar tu intención.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item" data-categoria="productos">
+                    <summary class="faq-pregunta">
+                        <span>¿Puedo personalizar mi Set o Mystic Box?</span>
+                        <svg class="icono-plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            aria-hidden="true">
+                            <path
+                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm7 14h-5v5h-4v-5h-5v-4h5v-5h4v5h5v4z" />
+                        </svg>
+                    </summary>
+                    <div class="faq-respuesta">
+                        <p>¡Totalmente! Ese es el alma de Nalomy. Podés elegir el color de tu Set, el tipo de piedra, la
+                            combinación de joyería o solicitar modificaciones especiales. Escribinos por WhatsApp y
+                            creamos algo único para vos. El proceso de personalización lleva <strong>10 días
+                                hábiles</strong>.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item" data-categoria="productos">
+                    <summary class="faq-pregunta">
+                        <span>¿Hacen souvenirs o pedidos mayoristas?</span>
+                        <svg class="icono-plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            aria-hidden="true">
+                            <path
+                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm7 14h-5v5h-4v-5h-5v-4h5v-5h4v5h5v4z" />
+                        </svg>
+                    </summary>
+                    <div class="faq-respuesta">
+                        <p>Sí, diseñamos piezas especiales para eventos o locales. A partir de <strong>15
+                                piezas</strong> (incluso en crudo), podemos ofrecerte un presupuesto mayorista. Contanos
+                            tu idea y fecha estimada por WhatsApp para enviarte una cotización a medida.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item" data-categoria="metodos-pago">
+                    <summary class="faq-pregunta">
+                        <span>¿Cómo funciona la compra y el pago?</span>
+                        <svg class="icono-plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            aria-hidden="true">
+                            <path
+                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm7 14h-5v5h-4v-5h-5v-4h5v-5h4v5h5v4z" />
+                        </svg>
+                    </summary>
+                    <div class="faq-respuesta">
+                        <p>Trabajamos con <strong>trato directo por WhatsApp</strong>. Elegís tus productos y te
+                            enviamos un enlace de Mercado Pago (no necesitás cuenta). Aceptamos debitos, transferencias
+                            y pagos en redes de cobranza (Abitab/RedPagos).</p>
+                    </div>
+                </details>
+
+                <details class="faq-item" data-categoria="metodos-pago">
+                    <summary class="faq-pregunta">
+                        <span>¿Puedo pagar en cuotas?</span>
+                        <svg class="icono-plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            aria-hidden="true">
+                            <path
+                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm7 14h-5v5h-4v-5h-5v-4h5v-5h4v5h5v4z" />
+                        </svg>
+                    </summary>
+                    <div class="faq-respuesta">
+                        <p>Sí, a través de Mercado Pago podés abonar con tarjeta de crédito en cuotas según las opciones
+                            disponibles de tu banco. Consultanos por WhatsApp para más detalles.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item" data-categoria="envios">
+                    <summary class="faq-pregunta">
+                        <span>¿Cómo son los envíos?</span>
+                        <svg class="icono-plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            aria-hidden="true">
+                            <path
+                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm7 14h-5v5h-4v-5h-5v-4h5v-5h4v5h5v4z" />
+                        </svg>
+                    </summary>
+                    <div class="faq-respuesta">
+                        <p><strong>Montevideo:</strong> envío sin costo en Zona Centro. Otras zonas, consulta por
+                            WhatsApp.</p>
+                        <p><strong>Interior del país:</strong> coordinamos el envío por DAC o la empresa que prefieras
+                            (costo a cargo del comprador).</p>
+                    </div>
+                </details>
+
+                <details class="faq-item" data-categoria="envios">
+                    <summary class="faq-pregunta">
+                        <span>¿Cuánto tarda en llegar mi pedido?</span>
+                        <svg class="icono-plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                            aria-hidden="true">
+                            <path
+                                d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm7 14h-5v5h-4v-5h-5v-4h5v-5h4v5h5v4z" />
+                        </svg>
+                    </summary>
+                    <div class="faq-respuesta">
+                        <p>Los productos en stock se despachan en 24 a 48 horas hábiles. Los pedidos personalizados o
+                            sin stock llevan <strong>10 días hábiles</strong> de elaboración antes del envío. Te
+                            confirmamos disponibilidad al instante por WhatsApp.</p>
+                    </div>
+                </details>
+
+            </div>
+
+            <div class="contenedor-centrado" style="margin-top: 2rem;">
+                <a href="index.html" class="btn-volver">← Volver al inicio</a>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- ===== MODAL LEGAL ===== -->
+    <div class="modal-overlay" id="modal-legal" role="dialog" aria-modal="true"
+        aria-label="Políticas legales de Nalomy">
+        <div class="modal-contenedor">
+            <button class="modal-cerrar" id="cerrar-modal" aria-label="Cerrar">✕</button>
+            <div id="modal-contenido"></div>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+<footer class="footer-nalomy" id="contacto">
+    <img src="imagenes/android-chrome-192x192.png" alt="Logo de Nalomy">
+    <h2>Nalomy</h2>
+    <div class="footer-columnas">
+
+        <div class="col">
+            <h3>Tienda</h3>
+            <ul class="f">
+                <li><a href="#mystic-boxes">Mystic Box</a></li>
+                <li><a href="#sets-decorativos">Artesanías</a></li>
+                <li><a href="#nosotros">Nosotras</a></li>
+            </ul>
+        </div>
+
+        <div class="col">
+            <h3>Ayuda</h3>
+            <ul class="f">
+                <li><a href="faq.html">Preguntas Frecuentes</a></li>
+                <li><a href="faq.html">Envíos y Pagos</a></li>
+                <li><a href="legal.html">Políticas de Privacidad y Cookies</a></li>
+
+            </ul>
+        </div>
+
+        <div class="col">
+            <h3>Contacto</h3>
+            <ul class="f">
+                <li>
+                    <!-- WhatsApp PRO Lineal Minimalista -->
+                    <a href="https://wa.me" class="btn-whatsapp-lineal" target="_blank">
+                        <svg viewBox="0 0 24 24" class="svg-lineal">
+                            <path
+                                d="M12.004 2c-5.51 0-9.996 4.486-9.996 9.998 0 1.763.46 3.421 1.261 4.887l-1.269 4.637 4.745-1.245c1.417.761 3.019 1.196 4.721 1.196 5.512 0 9.997-4.487 9.997-10s-4.485-9.973-9.959-9.973zm0 1.799c4.524 0 8.196 3.674 8.196 8.199 0 4.526-3.672 8.199-8.196 8.199-1.547 0-2.986-.43-4.225-1.176l-.303-.182-2.825.741.755-2.756-.2-.317a8.146 8.146 0 0 1-1.202-4.508c0-4.525 3.673-8.199 8.196-8.199zm-3.535 4.512c-.173 0-.38.067-.549.255-.169.189-.646.633-.646 1.546 0 .913.664 1.794.757 1.919.092.124 1.308 1.998 3.17 2.803.443.192.788.307 1.058.393.446.142.852.122 1.173.074.358-.053 1.1-.45 1.256-.884.155-.434.155-.807.109-.885-.047-.078-.173-.122-.363-.217-.19-.095-1.1-.543-1.269-.605-.169-.062-.292-.093-.416.094-.124.187-.478.605-.586.729-.108.124-.216.14-.406.046-.19-.095-.803-.296-1.531-.945-.566-.505-.948-1.129-1.059-1.319-.111-.189-.012-.292.083-.386.085-.084.19-.221.285-.332.095-.11.127-.189.19-.315.064-.126.032-.236-.016-.331-.047-.095-.416-1.002-.57-1.373-.15-.363-.303-.314-.416-.319-.107-.005-.231-.005-.355-.005z" />
+                        </svg>
+                        <span>099 380 784</span>
+                    </a>
+                </li>
+                <li><a href="mailto:nalomygifts@gmail.com" class="link-email">nalomygifts@gmail.com</a></li>
+            </ul>
+
+            <!-- Redes Sociales puramente Lineales -->
+            <div class="footer-redes-lineales">
+                <!-- Instagram Lineal -->
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram de Nalomy"
+                    class="link-red-lineal">
+                    <svg viewBox="0 0 24 24" class="svg-lineal">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                    </svg>
+                </a>
+                <!-- Facebook Lineal -->
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook de Nalomy" class="link-red-lineal">
+                    <svg viewBox="0 0 24 24" class="svg-lineal">
+                        <path
+                            d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="footer-inferior">
+        <p>&copy; 2026 Nalomy. Todos los derechos reservados.</p>
+        <p>💳 Débito y Mercado Pago · 🚚 Envío gratis en Zona Centro (Montevideo)</p>
+    </div>
+</footer>
+
+<!-- Botón flotante de WhatsApp PRO -->
+<a href="https://wa.me/59899380784" class="whatsapp-flotante" target="_blank" aria-label="Escribinos por WhatsApp">
+    <!-- Icono vectorial PRO (Ya no es un emoji común) -->
+    <svg viewBox="0 0 24 24">
+        <path
+            d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.498 1.45 5.411 1.451 5.428 0 9.842-4.414 9.845-9.84 0-2.628-1.022-5.1-2.877-6.956C17.17 1.953 14.693.93 12.004.93c-5.43 0-9.843 4.414-9.846 9.843-.001 1.93.504 3.812 1.461 5.418l-.995 3.637 3.723-.976zm11.334-6.864c-.29-.145-1.716-.847-1.978-.942-.262-.096-.452-.144-.642.145-.19.284-.735.942-.9.1.135-.19.271-.38-.562-.474-.297-.033-.461-.114-.731-.22-.3-.117-.557-.282-.772-.468-.781-.674-1.405-1.493-1.834-2.41-.144-.251-.015-.387.111-.512.114-.112.262-.305.393-.457.13-.153.174-.262.262-.437.087-.175.043-.328-.021-.457-.065-.13-.562-1.353-.77-1.85-.203-.491-.41-.423-.561-.43-.145-.007-.313-.008-.48-.008-.169 0-.444.063-.676.314-.232.252-.887.867-.887 2.112 0 1.245.904 2.447 1.031 2.619.127.171 1.78 2.719 4.312 3.811.602.26 1.072.415 1.439.532.605.192 1.156.165 1.591.101.485-.072 1.416-.579 1.616-1.14.201-.56.201-1.04.141-1.14-.06-.1-.223-.145-.513-.29z" />
+    </svg>
+</a>
+
+    <script src="faq.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1648 @@
+/* ==========================================================================
+   NALOMY — HOJA DE ESTILOS
+   Estructura: 1.Variables 2.Reset 3.Base 4.Header/Nav 5.Hero
+               6.Productos 7.Piezas únicas 8.Footer 9.Responsive
+   ========================================================================== */
+
+/* ==========================================================================
+   1. VARIABLES DE MARCA
+   ========================================================================== */
+:root {
+    /* Fondo — degradado violeta profundo, identidad mística */
+    --fondo-superior: #4a1571;
+    --fondo-profundo: #150a24;
+    --violeta-borgona: #2a0e3f;
+
+    /* Tarjetas y botones secundarios */
+    --color-uva: #3f1f5c;
+    --color-uva-hover: #502b70;
+    --color-uva-hover-2: #220c35;
+
+    /* Acento premium — dorado saturado, alto contraste sobre violeta */
+    --dorado-principal: #e3b660;
+    --dorado-suave: #f6dfa8;
+    --dorado-titulos: #f0c518;
+    /* Textos claros */
+    --blanco: #f0e7f6;
+    --texto-claro: #f1e9f7;
+    --sombra-gris: 0 0 13px rgba(B8, B8, B8, 0.5);
+    --gris-claro: 0 0 13px rgba(185, 185, 185, 0.5);
+    /* WhatsApp (reconocimiento universal = confianza para el clic) */
+    --whatsapp-green: #098838;
+    --whatsapp-hover: #0dd55a;
+    /* Tipografía */
+    --font-serif: 'Noto Serif', serif;
+    --font-sans: 'Noto Sans', sans-serif;
+
+    /* Escala de espaciado — un solo lugar para mantener todo consistente */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2.5rem;
+    --space-xl: 4rem;
+
+    /* Transición estándar */
+    --transition-base: 0.3s ease;
+}
+
+/* ==========================================================================
+   2. RESET
+   ========================================================================== */
+@import url('https://googleapis.com');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* ==========================================================================
+   3. BASE
+   ========================================================================== */
+html {
+    overflow-x: hidden;
+}
+
+body,
+.body-faq,
+.body-legal {
+    overflow-x: hidden;
+    font-family: var(--font-sans);
+    background: linear-gradient(180deg, var(--fondo-profundo) 0%, var(--fondo-profundo) 800px, var(--fondo-profundo) 100%);
+    color: var(--texto-claro);
+    line-height: 1.6;
+}
+
+
+
+h1 {
+    font-size: 3.5rem;
+    margin-bottom: 30px;
+    color: var(--blanco);
+    font-family: var(--font-serif);
+    text-shadow: 2px 2px 10px rgba(22, 3, 46, 0.8);
+    position: relative;
+    z-index: 1;
+
+}
+
+h2,
+h3,
+.logo {
+    font-family: var(--font-serif);
+    color: var(--blanco);
+}
+
+.subt {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: var(--space-xs);
+    color: var(--dorado-principal);
+    font-family: var(--font-serif);
+    text-shadow: 2px 2px 10px rgba(22, 3, 46, 0.8);
+    position: relative;
+    z-index: 1;
+
+}
+
+
+p-dorado {
+    color: var(--dorado-principal);
+    font-size: 1.3rem;
+    max-width: 32rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--dorado-principal), transparent);
+    margin: var(--space-xl) auto;
+    width: 80%;
+}
+
+/* ==========================================================================
+   4. HEADER Y NAVEGACIÓN
+   ========================================================================== */
+.header-principal {
+    display: block;
+}
+
+.nav-principal {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) 5%;
+    background-color: var(--fondo-profundo);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: var(--space-sm);
+}
+
+.nav-links a {
+    display: block;
+    background-color: var(--color-uva);
+    color: var(--blanco);
+    padding: 0.6rem 1.2rem;
+    border-radius: 3rem;
+    border: 1px solid transparent;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: var(--font-sans);
+    text-align: center;
+    transition: background-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.nav-links a:hover,
+.nav-links a:focus-visible {
+    background-color: var(--color-uva-hover);
+    border-color: var(--dorado-principal);
+    box-shadow: 0 4px 10px rgba(227, 182, 96, 0.35);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    color: var(--blanco);
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   5. HERO 
+   ========================================================================== */
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+
+    /* 1. CONTROL DE ALTURA (Ajusta este valor a tu gusto) */
+    min-height: 90vh;
+    /* Ocupa el 75% de la altura de la pantalla del usuario */
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-md);
+    text-align: center;
+    padding: var(--space-md) var(--space-sm);
+    /* Añadido padding arriba/abajo por seguridad */
+
+    /* 2. CAPA OSCURA + IMAGEN (Soluciona el conflicto y estira la foto) */
+    background-image: linear-gradient(rgba(21, 2, 51, 0.146), rgba(0, 0, 0, 0.45)), url(../imagenes/Hero/hero-serenidad-ok.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.hero-content .dorado {
+    color: var(--dorado-principal);
+    font-size: 1.3rem;
+    max-width: 32rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.9rem 2.2rem;
+    background-color: var(--dorado-principal);
+    color: var(--fondo-profundo);
+    border: 1px solid var(--dorado-principal);
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    font-family: var(--font-sans);
+    text-decoration: none;
+    transition: all var(--transition-base);
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+    transition: transform var(--transition-base), box-shadow var(--transition-base), background-color var(--transition-base);
+    animation: latido-oro 2s ease-in-out infinite;
+}
+
+.cta-button:hover,
+.cta-button:focus-visible {
+    background-color: var(--dorado-suave);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(227, 182, 96, 0.4);
+}
+
+.cta-button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 10px rgba(227, 181, 96, 0.326);
+}
+
+
+@keyframes latido-oro {
+    0% {
+        box-shadow:
+            0 0 10px rgba(255, 204, 0, 0.4),
+            0 0 20px rgba(255, 204, 0, 0.2);
+        border-color: #ffd700;
+        /* Oro estándar */
+    }
+
+    50% {
+        box-shadow:
+            0 0 30px rgba(255, 140, 0, 0.6),
+            0 0 60px rgba(230, 193, 148, 0.4);
+        border-color: #ff8c00;
+        /* Naranja vibrante */
+    }
+
+    100% {
+        box-shadow:
+            0 0 10px rgba(255, 204, 0, 0.4),
+            0 0 20px rgba(201, 196, 175, 0.2);
+        border-color: #ffd700;
+    }
+}
+
+/* ==========================================================================
+   6. SECCIONES Y PRODUCTOS
+   ========================================================================== */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--space-lg) 1.5rem;
+}
+
+.intro-seccion {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto var(--space-lg) auto;
+    color: var(--dorado-suave);
+    font-size: 1.05rem;
+}
+
+.contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: var(--space-lg);
+    justify-content: center;
+    align-items: start;
+    margin-bottom: var(--space-lg);
+}
+
+.tarjeta-producto {
+    background-color: var(--color-uva);
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(227, 182, 96, 0.15);
+    transition: transform var(--transition-base), box-shadow var(--transition-base), background-color var(--transition-base);
+    text-align: center;
+    color: var(--dorado-principal);
+}
+
+.tarjeta-producto:hover {
+    transform: translateY(-5px);
+    background-color: var(--color-uva-hover);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    border-color: var(--dorado-principal);
+}
+
+.tarjeta-producto h3 {
+    font-size: 1.4rem;
+    padding: var(--space-md) var(--space-md) 0.7rem var(--space-md);
+    text-align: center;
+}
+
+.tarjeta-producto img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    opacity: 0.95;
+    transition: opacity var(--transition-base);
+}
+
+.tarjeta-producto:hover img {
+    opacity: 1;
+}
+
+/* Efecto crossfade: imagen principal ↔ imagen de detalle al hacer hover */
+.imagen-hover-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.imagen-hover-container img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+}
+
+.imagen-hover-container .img-principal {
+    opacity: 1;
+}
+
+.imagen-hover-container .img-detalle {
+    opacity: 0;
+}
+
+.imagen-hover-container:hover .img-principal,
+.imagen-hover-container.mostrar-detalle .img-principal {
+    opacity: 0;
+}
+
+.imagen-hover-container:hover .img-detalle,
+.imagen-hover-container.mostrar-detalle .img-detalle {
+    opacity: 1;
+}
+
+.imagen-hover-container.imagen-completa .img-principal {
+    object-fit: contain;
+}
+
+.detalle-piedra,
+.componentes {
+    font-size: 0.9rem;
+    padding: 1.2rem var(--space-md) 0 var(--space-md);
+    color: var(--dorado-principal);
+}
+
+.detalle-piedra strong,
+.componentes strong {
+    color: var(--blanco);
+}
+
+.descripcion,
+.descripcion-desplegable,
+.contenido-caja {
+    font-size: 0.95rem;
+    padding: 0.5rem var(--space-md) var(--space-md) var(--space-md);
+    color: var(--dorado-suave);
+    flex-grow: 1;
+}
+
+.contenido-caja {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+summary {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--blanco);
+    padding: 0 var(--space-md) 1.2rem var(--space-md);
+    text-align: center;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   BOTÓN DE WHATSAPP / PRECIO EN TARJETAS DE PRODUCTO
+   ========================================================================== */
+.btn-whatsapp-precio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:
+        linear-gradient(#0d8602c5, #015706) padding-box,
+        linear-gradient(135deg, #25d366, #e6ca65, #128c7e) border-box;
+    border: 3px solid transparent;
+    color: var(--dorado-suave);
+    padding: 12px 20px;
+    border-radius: 30px;
+    /* Redondeado Pro */
+    text-decoration: none;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.8);
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    margin: 15px var(--space-md);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+.btn-whatsapp-precio:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp-precio:active {
+    transform: translateY(1px);
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.btn-texto {
+    font-size: 1rem;
+    color: var(--blanco);
+}
+
+/* Páginas secundarias: FAQ y Legal */
+.pagina-secundaria {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.separador-legal {
+    border: 0;
+    border-top: 1px solid var(--dorado-principal);
+    margin: 30px 0;
+}
+
+.separador-legal--punteado {
+    border-top-style: dashed;
+}
+
+.contenido-caja ul,
+.contenido-oculto ul,
+.bloque-detalle ul,
+.bloque-valor ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contenido-caja li,
+.contenido-oculto li,
+.bloque-detalle li,
+.bloque-valor li {
+    text-align: left;
+    text-indent: 1rem;
+    align-items: center;
+    margin-bottom: 0.4rem;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   ÁREA DE BOTÓN MÍSTICO Y ENLACES PRESTABLECIDOS
+   ========================================================================== */
+.ayuda-venta {
+    padding: 20px;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* --- EL BOTÓN MÍSTICO METÁLICO --- */
+.btn-mistico, .btn-volver {
+    display: flex;
+    text-decoration: none;
+    position: center;
+    margin-top: 1rem;
+    
+
+    transform-style: preserve-3d;
+    z-index: 1;
+
+    background:
+        linear-gradient(135deg, #1b0635 0%, #500592 40%, #601fa2 50%, #430e78 60%, #18052a 100%) padding-box,
+        linear-gradient(to right, #b8860b, #e6ca65, #996515, #f3e5ab, #b8860b) border-box;
+
+    border: 2px solid transparent;
+    border-radius: 50px;
+    color: var(--dorado-suave);
+
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+
+    padding: 8px 16px;
+    text-align: center;
+    line-height: 1.5;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.3),
+        0 5px 0px #1a031b,
+        0 8px 15px rgba(0, 0, 0, 0.4);
+
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.15s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.15s ease, color 0.15s ease;
+}
+
+;
+
+
+
+/* --- CAPA DEL BRILLO TRASERO --- */
+.btn-mistico::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50px;
+    background: radial-gradient(circle, rgba(243, 229, 171, 0.9) 0%, rgba(212, 175, 55, 0.5) 50%, rgba(0, 0, 0, 0) 70%);
+    transform: translateZ(-1px) scale(0.9);
+    z-index: -1;
+    opacity: 0;
+    filter: blur(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, filter 0.3s ease;
+}
+
+/* --- ACCIONES INTERACTIVAS --- */
+@media (hover: hover) {
+    .btn-mistico:hover {
+        color: #ffffff;
+        background:
+            linear-gradient(135deg, #3a136d 0%, #551c86 40%, #7c29cf 50%, #431671 60%, #450f78 100%) padding-box,
+            linear-gradient(to right, #b8860b, #e6ca65, #996515, #f3e5ab, #b8860b) border-box;
+
+        box-shadow:
+            inset 0 1px 0 rgba(255, 255, 255, 0.5),
+            0 5px 0px #ad7623,
+            0 8px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn-mistico:hover::after {
+        opacity: 1;
+        transform: translateZ(-1px) scale(1.3);
+        filter: blur(15px);
+    }
+}
+
+/* --- REGLA COMPLETADA CON ÉXITO: SENSACIÓN DE APRETAR --- */
+.btn-mistico:active,
+.btn-volver:active {
+    transform: translateY(5px);
+    box-shadow:
+        inset 0 4px 8px rgba(0, 0, 0, 0.8),
+        0 0px 0px #1a031b,
+        0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.05s ease, box-shadow 0.05s ease;
+}
+
+.btn-mistico:active::after {
+    opacity: 0.2;
+    transform: translateZ(-1px) scale(1);
+}
+
+
+
+/* ==========================================================================
+   8. FOOTER
+   ========================================================================== 
+    
+        (Escritorio)
+           ========================================================================== */
+footer {
+    background-color: #0d0514;
+    color: var(--dorado-principal);
+    padding: var(--space-lg) 1.5rem;
+    margin-top: var(--space-xl);
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(227, 181, 96, 0.191);
+}
+
+/* --- LOGO DE NALOMY INTEGRADO --- */
+.footer-nalomy>img {
+    display: block;
+    margin: 0 auto 8px auto;
+    width: 90px;
+    height: 90px;
+    max-width: 90px;
+    max-height: 90px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background:
+        linear-gradient(#0d0514, #0d0514) padding-box,
+        linear-gradient(to right, #b8860b, #e6ca65, #996515, #f3e5ab, #b8860b) border-box;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+    filter: drop-shadow(0 0 5px rgba(230, 202, 101, 0.15));
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), filter 0.3s ease;
+}
+
+@media (hover: hover) {
+    .footer-nalomy>img:hover {
+        transform: scale(1.05) rotate(3deg);
+        filter: drop-shadow(0 0 15px rgba(230, 202, 101, 0.5));
+    }
+}
+
+.footer-nalomy>img:active {
+    transform: scale(0.96);
+}
+
+/* --- NOMBRE NALOMY UNIFICADO --- */
+.footer-nalomy h2 {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    font-weight: 700;
+    color: #f3e5ab;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: 0 auto 45px auto;
+    text-align: center;
+    display: block;
+    width: fit-content;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Grid de 3 columnas: Tienda, Ayuda, Contacto */
+.footer-columnas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg) var(--space-md);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-columnas .col {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.footer-columnas h3 {
+    font-family: var(--font-serif);
+    color: var(--dorado-principal);
+    font-size: 1.1rem;
+    margin-bottom: var(--space-sm);
+    letter-spacing: 0.5px;
+}
+
+.f {
+    list-style: none;
+    padding: 0;
+}
+
+.f li {
+    margin-bottom: 0.6rem;
+    line-height: 1.4;
+}
+
+.f a {
+    color: var(--texto-claro);
+    text-decoration: none;
+    transition: color var(--transition-base);
+}
+
+.f a:hover,
+.f a:focus-visible {
+    color: var(--dorado-principal);
+    text-decoration: none;
+}
+
+/* Línea inferior: copyright + medios de pago/envío */
+.footer-inferior {
+    max-width: 1200px;
+    margin: var(--space-lg) auto 0 auto;
+    padding-top: var(--space-md);
+    border-top: 1px solid rgba(227, 182, 96, 0.15);
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--dorado-suave);
+}
+
+.footer-inferior p {
+    margin-bottom: 0.4rem;
+}
+
+/* Botones de contacto dentro del footer */
+.btn-whatsapp,
+.link-email,
+.btn-volver {
+    color: var(--texto-claro);
+    text-decoration: none;
+    transition: color var(--transition-base);
+}
+
+.btn-whatsapp:hover,
+.link-email:hover,
+.btn-volver:hover {
+    color: var(--dorado-principal);
+    text-decoration: underline;
+}
+
+.btn-volver {
+    display: inline-block;
+    margin-top: var(--space-lg);
+    font-weight: 600;
+}
+
+/* ==========================================================================
+           REDES SOCIALES LINEALES PURO ORO
+           ========================================================================== */
+.footer-redes-lineales {
+    margin-top: 18px;
+    display: flex;
+    gap: 20px;
+}
+
+.link-red-lineal {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background: transparent;
+    border: none;
+    box-shadow: none !;
+    transition: transform 0.25s ease;
+}
+
+.svg-lineal {
+    width: 22px;
+    height: 22px;
+    fill: #e6ca65;
+    transition: fill 0.25s ease, filter 0.25s ease;
+}
+
+@media (hover: hover) {
+    .link-red-lineal:hover {
+        transform: translateY(-3px);
+    }
+
+    .link-red-lineal:hover .svg-lineal {
+        fill: #ffffff;
+        filter: drop-shadow(0 0 5px #e6ca65);
+    }
+}
+
+/* ==========================================================================
+           BOTÓN FLOTANTE MÍSTICO PREMIUM (Unificado sin duplicados)
+           ========================================================================== */
+.whatsapp-flotante {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 55px;
+    height: 55px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background:
+        linear-gradient(#0b2011, #07150b) padding-box,
+        linear-gradient(135deg, #b8860b, #e6ca65, #996515, #f3e5ab) border-box;
+    border: 2px solid transparent;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    animation: pulsoMistico 3s infinite ease-in-out;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-flotante svg {
+    width: 26px;
+    height: 26px;
+    fill: #e6ca65;
+    transition: fill 0.2s ease;
+}
+
+@media (hover: hover) {
+    .whatsapp-flotante:hover {
+        transform: translateY(-4px) scale(1.05);
+        box-shadow: 0 0 20px rgba(230, 202, 101, 0.7);
+        background:
+            linear-gradient(#128c7e, #07150b) padding-box,
+            linear-gradient(135deg, #ffffff, #e6ca65, #b8860b) border-box;
+    }
+
+    .whatsapp-flotante:hover svg {
+        fill: #ffffff;
+    }
+}
+
+.whatsapp-flotante:active {
+    transform: translateY(2px) scale(0.95);
+    box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.8);
+}
+
+@keyframes pulsoMistico {
+    0% {
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5), 0 0 0 0px rgba(230, 202, 101, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 0 12px rgba(230, 202, 101, 0);
+    }
+
+    100% {
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5), 0 0 0 0px rgba(230, 202, 101, 0);
+    }
+}
+
+/* ==========================================================================
+           DISEÑO EXCLUSIVO ADAPTATIVO PARA CELULARES (Se ejecuta abajo del todo)
+           ========================================================================== */
+@media (max-width: 768px) {
+    footer {
+        padding: 40px 15px 25px 15px;
+    }
+
+    /* ESCUDO INQUEBRANTABLE PARA EL LOGO (Bloquea deformaciones en celulares) */
+    .footer-nalomy>img {
+        width: 80px !;
+        height: 80px;
+        min-width: 80px;
+        min-height: 80px;
+        max-width: 80px;
+        max-height: 80px;
+        flex-shrink: 0;
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto 8px auto;
+    }
+
+    .footer-nalomy h2 {
+        font-size: 14px;
+        letter-spacing: 4px;
+        margin-bottom: 35px;
+    }
+
+    /* Cambia la cuadrícula horizontal de 3 columnas a una fila VERTICAL perfecta */
+    .footer-columnas {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        text-align: center;
+    }
+
+    .footer-columnas .col {
+        align-items: center;
+        text-align: center t;
+        width: 100%;
+    }
+
+    .f li {
+        margin-bottom: 0.8rem;
+        /* Más cómodo para pulsar con el dedo */
+    }
+
+    .footer-redes-lineales {
+        justify-content: center t;
+        margin-top: 15px;
+    }
+
+    .whatsapp-flotante {
+        width: 48px;
+        height: 48px;
+        bottom: 15px;
+        right: 15px
+    }
+
+    .whatsapp-flotante svg {
+        width: 22px;
+        height: 22px;
+    }
+}
+
+/* ==========================================================================
+           SECCIÓN SEPARADA PARA EL ÁREA DE FAQ / TARJETAS
+           ========================================================================== */
+.body-faq {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: var(--blanco);
+    padding: var(--space-lg) 1.5rem;
+    margin-top: var(--space-xl);
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(227, 181, 96, 0.191);
+    overflow-x: hidden;
+    font-family: var(--font-sans);
+    background: var(--fondo-profundo);
+    color: var(--texto-claro);
+    line-height: 1.6;
+}
+
+.contenedor-faq {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: var(--space-lg);
+    justify-content: center;
+    align-items: start;
+    margin-bottom: var(--space-lg);
+}
+
+.tarjeta-faq {
+    background-color: var(--color-uva);
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(227, 182, 96, 0.15);
+    transition: transform var(--transition-base), box-shadow var(--transition-base), background-color var(--transition-base);
+    text-align: center;
+    color: var(--dorado-principal);
+}
+
+.tarjeta-faq:hover {
+    transform: translateY(-5px);
+    background-color: var(--color-uva-hover);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    border-color: var(--dorado-principal);
+}
+
+.tarjeta-faq h3 {
+    font-size: 1.4rem;
+    padding: var(--space-md) var(--space-md) 0.7rem var(--space-md);
+    text-align: center;
+}
+
+.tarjeta-faq img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    opacity: 0.95;
+    transition: opacity var(--transition-base);
+}
+
+.tarjeta-faq:hover img {
+    opacity: 1;
+}
+
+
+/* --- CONTENEDOR DE REDES LINEALES --- */
+.footer-redes-lineales {
+    margin-top: 18px;
+    display: flex;
+    gap: 20px;
+    /* Separación elegante entre logos */
+}
+
+/* --- ENLACES LINEALES PUROS --- */
+.link-red-lineal {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    background: transparent;
+    /* Eliminamos cualquier fondo */
+    border: none;
+    /* Eliminamos cualquier borde circular */
+    box-shadow: none;
+    /* Eliminamos sombras de caja rígidas */
+    transition: transform 0.25s ease;
+}
+
+/* --- ESTILO VECTORIAL DORADO --- */
+.svg-lineal {
+    width: 22px;
+    /* Un poco más grandes al no tener marco */
+    height: 22px;
+    fill: #e6ca65;
+    /* Color oro pulido para las líneas del icono */
+    transition: fill 0.25s ease, filter 0.25s ease;
+}
+
+/* Hover: El icono lineal se vuelve blanco destellante y flota */
+@media (hover: hover) {
+    .link-red-lineal:hover {
+        transform: translateY(-3px);
+    }
+
+    .link-red-lineal:hover .svg-lineal {
+        fill: #ffffff;
+        filter: drop-shadow(0 0 5px #e6ca65);
+        /* Destello dorado sutil solo en las líneas */
+    }
+}
+
+
+/* --- WHATSAPP ESTILO LINEAL PRO --- */
+
+/* --- BOTÓN FLOTANTE MÍSTICO PREMIUM --- */
+.whatsapp-flotante {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 55px;
+    height: 55px;
+    z-index: 9999;
+    /* Se asegura de estar siempre por encima de todo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+    /* Base verde mística oscura combinada con borde metálico dorado */
+    background:
+        linear-gradient(#086209, #051f0c) padding-box,
+        linear-gradient(135deg, #b8860b, #e6ca65, #996515, #f3e5ab) border-box;
+    border: 2px solid transparent;
+
+    /* Sombras y animación inicial */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+
+    /* Animación sutil de respiración para llamar la atención elegantemente */
+    animation: pulsoMistico 3s infinite ease-in-out;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* El icono interno en color oro brillante */
+.whatsapp-flotante svg {
+    width: 26px;
+    height: 26px;
+    fill: #e6ca65;
+    transition: fill 0.2s ease;
+}
+
+/* --- INTERACCIONES --- */
+
+/* Hover en PC: Brilla en oro intenso y sube un poco */
+@media (hover: hover) {
+    .whatsapp-flotante:hover {
+        transform: translateY(-4px) scale(1.05);
+        box-shadow: 0 0 20px rgba(230, 202, 101, 0.7);
+        /* El fondo cambia ligeramente al verde oficial en el reflejo */
+        background:
+            linear-gradient(#04913a, #083d17) padding-box,
+            linear-gradient(135deg, #f6e88f, #e6ca65, #b8860b) border-box;
+    }
+
+    .whatsapp-flotante:hover svg {
+        fill: #ffffff;
+        /* El logo se vuelve blanco puro al apuntarlo */
+    }
+}
+
+/* Presión física táctil en el teléfono */
+.whatsapp-flotante:active {
+    transform: translateY(2px) scale(0.95);
+    box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* --- ANIMACIÓN DE RESPIRACIÓN ELEGANTE --- */
+@keyframes pulsoMistico {
+    0% {
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5), 0 0 0 0px rgba(230, 202, 101, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), 0 0 0 12px rgba(230, 202, 101, 0);
+    }
+
+    100% {
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5), 0 0 0 0px rgba(230, 202, 101, 0);
+    }
+}
+
+/* --- CONFIGURACIÓN CORRECTA DEL LOGO DE NALOMY --- */
+.footer-nalomy>img {
+    display: block;
+    /* Fuerza al logo a comportarse como bloque para poder centrarlo */
+    margin: 0 auto 15px auto;
+    /* Centrado horizontal perfecto automático y margen inferior */
+
+    width: 90px;
+    /* Tamaño elegante y controlado */
+    height: 90px;
+    object-fit: cover;
+    /* Evita que la imagen se deforme si no es perfectamente cuadrada */
+    border-radius: 50%;
+    /* Recorte circular impecable estilo amuleto */
+
+    /* Anillo exterior de oro pulido usando la técnica de doble fondo */
+    border: 2px solid transparent;
+    background:
+        linear-gradient(#120422, #120422) padding-box,
+        /* Se acopla al fondo oscuro del footer */
+        linear-gradient(to right, #b8860b, #e6ca65, #996515, #f3e5ab, #b8860b) border-box;
+
+    /* Sombras de profundidad mística */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7);
+    filter: drop-shadow(0 0 5px rgba(230, 202, 101, 0.15));
+
+    /* Preparación para la interactividad táctil y del mouse */
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), filter 0.3s ease;
+}
+
+/* Efecto mágico interactivo al apuntarlo con el cursor */
+@media (hover: hover) {
+    .footer-nalomy>img:hover {
+        transform: scale(1.05) rotate(3deg);
+        /* Crece sutilmente y da un leve giro elegante */
+        filter: drop-shadow(0 0 15px rgba(230, 202, 101, 0.5));
+        /* Destello de aura dorada */
+    }
+}
+
+/* Respuesta física inmediata al tocarlo en pantallas móviles */
+.footer-nalomy>img:active {
+    transform: scale(0.96);
+    filter: drop-shadow(0 0 5px rgba(230, 202, 101, 0.2));
+}
+
+/* --- 2. EL NOMBRE "NALOMY" COMO PARTE DEL LOGO --- */
+.footer-nalomy h2 {
+    font-family: 'Noto Sans', sans-serif;
+    /* Usamos la misma fuente limpia de los botones */
+    font-size: 16px;
+    /* Tamaño elegante, no gigantesco */
+    font-weight: 700;
+    color: #f3e5ab;
+    /* Tono oro suave metálico */
+    text-transform: uppercase;
+    /* Mayúsculas para máxima elegancia */
+    letter-spacing: 5px;
+    /* Texto bien separado, estilo marca de lujo */
+
+    margin: 0 auto 45px auto;
+    /* Cero margen arriba para unirlo al logo, y espacio abajo antes de las columnas */
+    text-align: center;
+    display: block;
+    width: fit-content;
+
+    /* Sutil reflejo de luz metálica en el texto */
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.8);
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* --- 3. EFECTO HOVER EN CONJUNTO (Opcional y muy Pro) --- */
+/* Cuando el usuario pasa el mouse por encima de TODO el footer, el nombre y el logo reaccionan juntos */
+.footer-nalomy:hover h2 {
+    color: #ffffff;
+    /* El nombre se ilumina en blanco metálico */
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   FAQ — Agregar al final de style.css
+   ========================================================================== */
+
+/* ------------------------------------------------------------------
+   CATEGORÍAS
+------------------------------------------------------------------ */
+.faq-categorias {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto var(--space-lg) auto;
+}
+
+.faq-categoria {
+    
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 1rem 1.4rem;
+    border-radius: 12px;
+    border: 1px solid rgba(227, 182, 96, 0.2);
+    background-color: var(--color-uva);
+    color: var(--dorado-suave);
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: bold;
+    
+    transition: border-color var(--transition-base),
+        background-color var(--transition-base),
+        box-shadow var(--transition-base),
+        transform var(--transition-base);
+        min-width: 90px;
+            max-width: 120px;
+            text-align: center;
+            word-break: break-word
+}
+
+.faq-categoria svg {
+    width: 32px;
+    height: 32px;
+    fill: var(--dorado-principal);
+    transition: fill var(--transition-base);
+}
+
+.faq-categoria:hover,
+.faq-categoria[aria-pressed="true"] {
+    border-color: var(--dorado-principal);
+    background-color: var(--color-uva-hover);
+    box-shadow: 0 0 14px rgba(227, 182, 96, 0.3);
+    transform: translateY(-2px);
+}
+
+.faq-categoria[aria-pressed="true"] svg {
+    fill: var(--dorado-suave);
+}
+
+.faq-categoria:active {
+    transform: scale(0.97);
+}
+
+.faq-categoria-titulo {
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* ------------------------------------------------------------------
+   ITEMS DE PREGUNTA
+------------------------------------------------------------------ */
+.faq-item {
+    background-color: var(--color-uva);
+    border: 1px solid rgba(227, 182, 96, 0.15);
+    border-radius: 10px;
+    margin-bottom: 0.6rem;
+    overflow: hidden;
+    transition: border-color var(--transition-base);
+}
+
+.faq-item[open] {
+    border-color: var(--dorado-principal);
+}
+
+.faq-pregunta {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.2rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--blanco);
+    transition: background-color var(--transition-base);
+}
+
+/* Quita el triángulo nativo en todos los navegadores */
+.faq-pregunta::-webkit-details-marker {
+    display: none;
+}
+
+.faq-pregunta::marker {
+    display: none;
+}
+
+.faq-pregunta:hover {
+    background-color: var(--color-uva-hover);
+}
+
+/* Icono + */
+.icono-plus {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    fill: var(--dorado-principal);
+    transition: transform 0.3s ease;
+}
+
+.faq-item[open] .icono-plus {
+    transform: rotate(45deg);
+}
+
+/* Contenido de la respuesta */
+.faq-respuesta {
+    padding: 0 1.2rem 1.2rem 1.2rem;
+    color: var(--dorado-suave);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.faq-respuesta p {
+    margin-bottom: 0.5rem;
+}
+
+.faq-respuesta p:last-child {
+    margin-bottom: 0;
+}
+
+/* ------------------------------------------------------------------
+   MODAL LEGAL
+------------------------------------------------------------------ */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.78);
+    z-index: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-contenedor {
+    background: var(--color-uva);
+    border: 1px solid var(--dorado-principal);
+    border-radius: 16px;
+    max-width: 680px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: var(--space-md) var(--space-lg) var(--space-lg) var(--space-lg);
+    position: relative;
+    box-shadow: 0 0 40px rgba(227, 182, 96, 0.15);
+}
+
+.modal-cerrar {
+    position: sticky;
+    top: 0;
+    float: right;
+    background: var(--violeta-borgona);
+    border: 1px solid var(--dorado-principal);
+    color: var(--dorado-principal);
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    transition: background-color var(--transition-base), box-shadow var(--transition-base);
+    z-index: 1;
+}
+
+.modal-cerrar:hover {
+    background-color: var(--color-uva-hover);
+    box-shadow: 0 0 10px rgba(227, 182, 96, 0.4);
+}
+
+/* Estilos para el contenido cargado del legal.html dentro del modal */
+#modal-contenido h1,
+#modal-contenido h2 {
+    font-size: 1.3rem;
+    color: var(--dorado-principal);
+    margin: 1rem 0 0.5rem;
+}
+
+#modal-contenido p {
+    color: var(--dorado-suave);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 0.6rem;
+}
+
+#modal-contenido a {
+    color: var(--dorado-principal);
+}
+
+/* ------------------------------------------------------------------
+   RESPONSIVE FAQ
+------------------------------------------------------------------ */
+@media (max-width: 600px) {
+    .faq-categorias {
+        gap: 0.6rem;
+    }
+
+    .faq-categoria {
+        padding: 0.8rem 1rem;
+        min-width: 80px;
+        font-size: 0.78rem;
+    }
+
+    .faq-categoria svg {
+        width: 26px;
+        height: 26px;
+    }
+
+    .modal-contenedor {
+        padding: var(--space-sm);
+        max-height: 90vh;
+    }
+}
+
+
+
+/* ==========================================================================
+   9. RESPONSIVE
+   ========================================================================== */
+/* ==========================================================================
+   MEDIA QUERIES ORDENADOS Y CORREGIDOS (De mayor a menor tamaño de pantalla)
+   ========================================================================== */
+
+/* --- PANTALLAS HASTA 768px (Tablets y Celulares Grandes) --- */
+@media (max-width: 768px) {
+    .hero-content {
+        min-height: 60vh;
+        aspect-ratio: 9 / 16;
+        max-height: 600px;
+    }
+
+    /* 1. Evita que el Footer se desborde */
+    .footer-nalomy {
+        padding: 40px 15px 25px 15px;
+    }
+
+    /* 2. PROTECCIÓN INQUEBRANTABLE DEL LOGO (Ya no se deforma) */
+    .footer-nalomy>img {
+        width: 80px;
+        height: 80px;
+        min-width: 80px;
+        /* Bloquea que flexbox lo achique de los lados */
+        min-height: 80px;
+        /* Bloquea que flexbox lo achique verticalmente */
+        max-width: 80px;
+        max-height: 80px;
+        flex-shrink: 0;
+        /* Prohibe la deformación elástica */
+        aspect-ratio: 1 / 1 !;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    /* 3. Nombre de la marca adaptado */
+    .footer-nalomy h2 {
+        font-size: 14px;
+        letter-spacing: 4px;
+        margin-bottom: 35px;
+    }
+
+    /* 4. REORGANIZACIÓN VERTICAL SEGURA */
+    .footer-columnas {
+        display: flex;
+        /* Asegura flexbox para móviles */
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+    }
+
+    .footer-columnas .col {
+        width: 100%;
+        text-align: center;
+        max-width: 280px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* 5. Títulos de las secciones centrados */
+    .footer-columnas h3 {
+        margin-bottom: 12px;
+        padding-bottom: 6px;
+        display: inline-block;
+        width: auto;
+    }
+
+    /* 6. Enlaces táctiles cómodos para los dedos */
+    .footer-columnas ul.f li {
+        margin-bottom: 15px;
+    }
+
+    .footer-columnas ul.f li a {
+        font-size: 15px;
+        display: block;
+    }
+
+    /* 7. Redes Sociales centradas */
+    .footer-redes-lineales {
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    /* 8. Texto legal inferior */
+    .footer-inferior {
+        margin-top: 40px;
+        line-height: 1.8;
+    }
+}
+
+/* --- PANTALLAS HASTA 600px (Celulares Estándar) --- */
+@media (max-width: 600px) {
+    .menu-toggle {
+        order: 2;
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: var(--space-sm) 0;
+        gap: var(--space-sm);
+        border-top: 1px solid var(--dorado-principal);
+        border-bottom: 1px solid var(--dorado-principal);
+        background-color: var(--violeta-borgona);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-content .dorado {
+        font-size: 1.05rem;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    .contenedor-productos {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: var(--space-lg) 1rem;
+    }
+
+    /* Redes sociales del contenedor original centradas */
+    .footer-redes {
+        justify-content: center;
+    }
+
+    /* Botón flotante de WhatsApp Pro escalado para pulgares */
+    .whatsapp-flotante {
+        width: 48px;
+        height: 48px;
+        bottom: 1rem;
+        right: 1rem;
+    }
+
+    .whatsapp-flotante svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    /* --- AJUSTES DEL BOTÓN MÍSTICO PREGUNTAS FRECUENTES EN MÓVIL --- */
+    .ayuda-venta a {
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+        padding: 0.5rem 1.4rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* --- PANTALLAS HASTA 400px (Celulares Pequeños) --- */
+@media (max-width: 400px) {
+    .contenedor-productos {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ==========================================================================
+   ESTADOS GLOBALES DEL BOTÓN DE AYUDA (Fuera de los Media Queries)
+   ========================================================================== */
+.ayuda-venta a:hover,
+.ayuda-venta a:focus-visible {
+    background-color: var(--color-uva-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(227, 182, 96, 0.4);
+    border-color: var(--dorado-principal);
+}
+
+.ayuda-venta a:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 10px rgba(227, 181, 96, 0.326);
+    border-color: var(--dorado-principal);
+}
+
+.ayuda-venta a:visited,
+.ayuda-venta a:link {
+    color: var(--dorado-suave);
+    text-decoration: none;
+}
