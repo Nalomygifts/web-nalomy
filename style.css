@@ -207,9 +207,10 @@ hr {
     text-align: center;
     padding: var(--space-md) var(--space-sm);
     /* Añadido padding arriba/abajo por seguridad */
+    
 
     /* 2. CAPA OSCURA + IMAGEN (Soluciona el conflicto y estira la foto) */
-    background-image: linear-gradient(rgba(21, 2, 51, 0.146), rgba(0, 0, 0, 0.45)), url(..imagenes/Hero/hero-nalomy.webp);
+background-image: linear-gradient(rgba(21, 2, 51, 0.146), rgba(0, 0, 0, 0.45)), url(imagenes/Hero/hero-nalomy.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
