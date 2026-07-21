@@ -1444,23 +1444,27 @@ footer {
 
 /* ==========================================================================
    9. RESPONSIVE
-   ========================================================================== */
-/* ==========================================================================
-   MEDIA QUERIES ORDENADOS Y CORREGIDOS (De mayor a menor tamaño de pantalla)
-   ========================================================================== */
+ */
 
-/* --- PANTALLAS HASTA 768px (Tablets y Celulares Grandes) --- */
-@media (max-width: 768px) {
-    .hero-content {
-        min-height: 60vh;
-        aspect-ratio: 9 / 16;
-        max-height: 600px;
-    }
 
     /* 1. Evita que el Footer se desborde */
     .footer-nalomy {
         padding: 40px 15px 25px 15px;
     }
+
+   @media (max-width: 768px) {
+    .hero-content {
+        min-height: 60vh;
+        aspect-ratio: 9 / 16;
+        max-height: 600px;
+
+        /* Mobile: recorte vertical, mucho más liviano */
+        background-image: linear-gradient(rgba(21, 2, 51, 0.146), rgba(0, 0, 0, 0.45)),
+                           url(../imagenes/Hero/hero-nalomy-mobile-640.webp);
+    }
+
+    
+}
 
     /* 2. PROTECCIÓN INQUEBRANTABLE DEL LOGO (Ya no se deforma) */
     .footer-nalomy>img {
