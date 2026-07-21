@@ -204,7 +204,7 @@ hr {
 
     /* Desktop: foto horizontal completa */
     background-image: linear-gradient(rgba(21, 2, 51, 0.146), rgba(0, 0, 0, 0.45)),
-                       url(../imagenes/Hero/hero-nalomy-1600.webp);
+        url(../imagenes/Hero/hero-nalomy-1600.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -505,12 +505,13 @@ summary {
 }
 
 /* --- EL BOTÓN MÍSTICO METÁLICO --- */
-.btn-mistico, .btn-volver {
+.btn-mistico,
+.btn-volver {
     display: flex;
     text-decoration: none;
     position: center;
     margin-top: 1rem;
-    
+
 
     transform-style: preserve-3d;
     z-index: 1;
@@ -1185,19 +1186,6 @@ footer {
     /* El nombre se ilumina en blanco metálico */
 }
 
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
-   FAQ — Agregar al final de style.css
-   ========================================================================== */
-
 /* ------------------------------------------------------------------
    CATEGORÍAS
 ------------------------------------------------------------------ */
@@ -1210,8 +1198,8 @@ footer {
 }
 
 .faq-categoria {
-    
-    
+
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1225,15 +1213,15 @@ footer {
     font-family: var(--font-sans);
     font-size: 0.85rem;
     font-weight: bold;
-    
+
     transition: border-color var(--transition-base),
         background-color var(--transition-base),
         box-shadow var(--transition-base),
         transform var(--transition-base);
-        min-width: 90px;
-            max-width: 120px;
-            text-align: center;
-            word-break: break-word
+    min-width: 90px;
+    max-width: 120px;
+    text-align: center;
+    word-break: break-word
 }
 
 .faq-categoria svg {
@@ -1447,12 +1435,8 @@ footer {
  */
 
 
-    /* 1. Evita que el Footer se desborde */
-    .footer-nalomy {
-        padding: 40px 15px 25px 15px;
-    }
+@media (max-width: 768px) {
 
-   @media (max-width: 768px) {
     .hero-content {
         min-height: 60vh;
         aspect-ratio: 9 / 16;
@@ -1460,11 +1444,13 @@ footer {
 
         /* Mobile: recorte vertical, mucho más liviano */
         background-image: linear-gradient(rgba(21, 2, 51, 0.146), rgba(0, 0, 0, 0.45)),
-                           url(../imagenes/Hero/hero-nalomy-mobile-640.webp);
+            url(../imagenes/Hero/hero-nalomy-mobile-640.webp);
     }
 
-    
-}
+    /* 1. Evita que el Footer se desborde */
+    .footer-nalomy {
+        padding: 40px 15px 25px 15px;
+    }
 
     /* 2. PROTECCIÓN INQUEBRANTABLE DEL LOGO (Ya no se deforma) */
     .footer-nalomy>img {
