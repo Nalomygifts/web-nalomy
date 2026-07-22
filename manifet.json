@@ -1,0 +1,21 @@
+{
+  "name": "Nalomy | Mystic Box y Joyería Holística",
+  "short_name": "Nalomy",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#121212",
+  "theme_color": "#2c2c2c",
+  "description": "Descubre en Nalomy nuestras Mystic Box y joyería con piedras naturales creadas con intención. Aromas, cristales y rituales en Uruguay.",
+  "icons": [
+    {
+      "src": "imagenes/varios/logo-nalomy.webp",
+      "sizes": "192x192",
+      "type": "image/webp"
+    },
+    {
+      "src": "imagenes/varios/logo-nalomy.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    }
+  ]
+}

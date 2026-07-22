@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,22 +8,24 @@
         content="Descubre en Nalomy nuestras Mystic Box y joyería con piedras naturales creadas con intención. Aromas, cristales y rituales con envío gratis en Montevideo.">
     <meta name="author" content="Nalomy">
 
-
     <link rel="icon" type="image/png" href="imagenes/varios/logo-nalomy.png">
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
+    
 
-
-
+    <!-- Preconexión y carga optimizada para evitar bloqueos de renderizado -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
+    <link rel="preload"
         href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:wght@400;700&display=swap"
-        rel="stylesheet">
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:wght@400;700&display=swap">
+    </noscript>
 
-    <link rel="stylesheet" href="style.css">
-
+    <!-- Estilo principal optimizado con alta prioridad -->
+    <link rel="stylesheet" href="style.css" fetchpriority="high">
 </head>
-
 <body>
     <header>
         <!-- ================= NAVEGACIÓN ================= -->
