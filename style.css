@@ -261,21 +261,21 @@ a {
     max-width: 32rem;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
 }
-
 .cta-button {
     display: inline-block;
     padding: 0.9rem 2.2rem;
     background-color: var(--dorado-principal);
-    color: var(--fondo-Noche);
+    color: var(--fondo-profundo);
     border: 1px solid var(--dorado-principal);
-    border-radius: 5px;
-    font-size: 1.1rem;
+    border-radius: 4rem;
+    box-shadow: 0 4px 14px rgba(65, 4, 136, 0.708);
+    font-size: 1.3rem;
     font-weight: 700;
     font-family: var(--font-sans);
     text-decoration: none;
     cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
     transition: transform var(--transition-base), box-shadow var(--transition-base), background-color var(--transition-base);
-    animation: latido-oro 2s ease-in-out infinite;
 }
 
 .cta-button:hover,
@@ -285,21 +285,19 @@ a {
     box-shadow: 0 6px 18px rgba(227, 182, 96, 0.4);
 }
 
-.cta-button:active {
-    transform: translateY(2px);
+.cta-button {
+    animation: pulsar 2s infinite;
 }
 
-@keyframes latido-oro {
+@keyframes pulsar {
 
     0%,
     100% {
-        box-shadow: 0 0 10px rgba(255, 204, 0, 0.4), 0 0 20px rgba(255, 204, 0, 0.2);
-        border-color: #ffd700;
+        filter: drop-shadow(0px 0px 7px rgba(42, 8, 121, 0.8));
     }
 
     50% {
-        box-shadow: 0 0 30px rgba(255, 140, 0, 0.6), 0 0 60px rgba(230, 193, 148, 0.4);
-        border-color: #ff8c00;
+        filter: drop-shadow(0px 0px 15px rgba(254, 248, 195, 0.8));
     }
 }
 
