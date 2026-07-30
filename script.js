@@ -1,15 +1,18 @@
-document.addEventListener("DOMContentLoaded", () => {
+// ==========================================================================
+// INICIALIZACIÓN GLOBAL DE LA CAPA DE DATOS
+// (Garantiza que 'window.dataLayer' exista desde el inicio)
+// ==========================================================================
+window.dataLayer = window.dataLayer || [];
 
-    // ==========================================================================
-    // FUNCIÓN AUXILIAR: Enviar eventos a Google Tag Manager (GTM-MJS222LG)
-    // ==========================================================================
-    function registrarEventoGTM(nombreEvento, parametros = {}) {
-        window.dataLayer = window.dataLayer || [];
-        window.dataLayer.push({
-            'event': nombreEvento,
-            ...parametros
-        });
-    }
+// FUNCIÓN AUXILIAR: Enviar eventos a Google Tag Manager (GTM-MJS222LG)
+function registrarEventoGTM(nombreEvento, parametros = {}) {
+    window.dataLayer.push({
+        'event': nombreEvento,
+        ...parametros
+    });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
 
     // 1. MENÚ HAMBURGUESA
     const botonMenu = document.querySelector(".menu-toggle");
@@ -41,18 +44,16 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // 3. CTA BUTTON (Optimizado para asegurar la captura del evento en GTM)
+    // 3. CTA BUTTON
     const ctaButton = document.querySelector(".cta-button");
     if (ctaButton) {
         ctaButton.addEventListener("click", (evento) => {
-            // Evento GTM: Clic en botón CTA principal
             registrarEventoGTM('clic_cta_hero', {
-                'destino': '#mystic-boxes',
-                'texto_boton': ctaButton.innerText.trim()
+                'destino': '#productos',
+                'texto_boton': ctaButton.innerText.trim() || 'Ver más'
             });
 
-            // Si es un enlace o requiere scroll suave, permitimos que GTM procese la orden
-            const destino = ctaButton.getAttribute("href") || "#mystic-boxes";
+            const destino = ctaButton.getAttribute("href") || "#productos";
             if (destino.startsWith("#")) {
                 const elementoDestino = document.querySelector(destino);
                 if (elementoDestino) {
@@ -63,18 +64,16 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 4. FAQ — elementos
+    // 4. FAQ Y MODAL LEGAL
     const botonesFaq = document.querySelectorAll('.faq-categoria');
     const preguntasFaq = document.querySelectorAll('.faq-item');
     const modal = document.getElementById('modal-legal');
     const modalBody = document.getElementById('modal-contenido');
     const btnCerrar = document.getElementById('cerrar-modal');
 
-    // --- Funciones del modal definidas al nivel raíz ---
     async function abrirModal() {
         if (!modal || !modalBody || !btnCerrar) return;
 
-        // Evento GTM: Apertura de Modal Legal/Seguridad
         registrarEventoGTM('abrir_modal_legal', {
             'tipo_modal': 'Políticas y Seguridad'
         });
@@ -111,13 +110,11 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.style.overflow = '';
     }
 
-    // --- Filtro de categorías ---
     if (botonesFaq.length > 0 && preguntasFaq.length > 0) {
         botonesFaq.forEach(btn => {
             btn.addEventListener('click', () => {
                 const cat = btn.dataset.categoria;
 
-                // Evento GTM: Filtro de FAQ interactuado
                 registrarEventoGTM('clic_faq_categoria', {
                     'categoria_seleccionada': cat
                 });
@@ -148,7 +145,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // --- Eventos del modal ---
     if (btnCerrar) btnCerrar.addEventListener('click', cerrarModal);
     if (modal) {
         modal.addEventListener('click', e => {
@@ -159,7 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.key === 'Escape' && modal?.classList.contains('visible')) cerrarModal();
     });
 
-    // 5. BOTÓN FLOTANTE DE WHATSAPP (Métricas de contacto)
+    // 5. BOTÓN FLOTANTE DE WHATSAPP
     const botonWhatsapp = document.querySelector('.whatsapp-flotante');
     if (botonWhatsapp) {
         botonWhatsapp.addEventListener('click', () => {
