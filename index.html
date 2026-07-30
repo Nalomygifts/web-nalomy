@@ -4,16 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MJS222LG');</script>
+    <!-- End Google Tag Manager -->
+
     <title>Nalomy | Mystic Box, Joyería Holística y Artesanías – Uruguay</title>
     <meta name="description"
         content="Descubre en Nalomy nuestras Mystic Box con joyería en piedras naturales, y nuestros sets de artesanías en cemento hechas a mano. Envíos a todo Uruguay, gratis en Montevideo.">
     <meta name="author" content="Nalomy">
 
+    <!-- Iconos y Manifest -->
     <link rel="icon" type="image/png" href="imagenes/Hero/el_logo-nalomy.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="imagenes/Hero/el_logo-nalomy.png">
     <link rel="manifest" href="manifest.json" crossorigin="use-credentials">
 
-
-    <!-- Preconexión y carga optimizada para evitar bloqueos de renderizado -->
+    <!-- Preconexión y carga optimizada de fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload"
@@ -24,12 +37,10 @@
             href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:wght@400;700&display=swap">
     </noscript>
 
-    <!-- Estilo principal optimizado con alta prioridad -->
+    <!-- Estilos CSS -->
     <link rel="stylesheet" href="style.css" fetchpriority="high">
-    <!-- Icono para pantalla de inicio en iOS (iPhone/iPad) -->
-    <link rel="apple-touch-icon" sizes="180x180" href="imagenes/Hero/el_logo-nalomy.png">
 
-
+    <!-- Open Graph (Redes Sociales) -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Nalomy" />
     <meta property="og:title" content="Nalomy | Mystic Box, Joyería Holística y Artesanías – Uruguay" />
@@ -42,9 +53,120 @@
         content="Mystic Box Nalomy con joyería en piedras naturales, y sets de artesanías en cemento hechas a mano" />
     <meta property="og:url" content="https://nalomy.vercel.app/" />
     <meta property="og:locale" content="es_UY" />
+
+    <!-- Datos Estructurados Schema.org (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://nalomy.vercel.app/#organization",
+          "name": "Nalomy",
+          "url": "https://nalomy.vercel.app/",
+          "logo": "https://nalomy.vercel.app/imagenes/Hero/el_logo-nalomy.png",
+          "image": "https://nalomy.vercel.app/imagenes/Hero/hero-serenidad-florecer.webp",
+          "description": "Joyería holística en piedras naturales y artesanías en cemento hechas a mano.",
+          "telephone": "+59899380784",
+          "email": "nalomygifts@gmail.com",
+          "priceRange": "$500 - $850 UYU",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Montevideo",
+            "addressCountry": "UY"
+          },
+          "areaServed": [
+            {
+              "@type": "AdministrativeArea",
+              "name": "Montevideo"
+            },
+            {
+              "@type": "Country",
+              "name": "Uruguay"
+            }
+          ]
+        },
+        {
+          "@type": "ItemList",
+          "name": "Catálogo de Productos",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "Product",
+                "name": "Mystic Box Serenidad",
+                "description": "Kit energético con piedra Amatista.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "850",
+                  "priceCurrency": "UYU",
+                  "availability": "https://schema.org/InStock",
+                  "shippingDetails": {
+                    "@type": "OfferShippingDetails",
+                    "shippingDestination": {
+                      "@type": "DefinedRegion",
+                      "addressCountry": "UY"
+                    },
+                    "comment": "Envío gratis en zona centro de Montevideo. Envíos al interior por cuenta del cliente en la agencia de su preferencia."
+                  }
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "Product",
+                "name": "Mystic Box 7 Chakras",
+                "description": "Kit energético para alinear cuerpo, mente y espíritu.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "750",
+                  "priceCurrency": "UYU",
+                  "availability": "https://schema.org/InStock",
+                  "shippingDetails": {
+                    "@type": "OfferShippingDetails",
+                    "shippingDestination": {
+                      "@type": "DefinedRegion",
+                      "addressCountry": "UY"
+                    },
+                    "comment": "Envío gratis en zona centro de Montevideo. Envíos al interior por cuenta del cliente en la agencia de su preferencia."
+                  }
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@type": "Product",
+                "name": "Set Protección: los 4 Monjes sabios",
+                "description": "Set decorativo artesanal en cemento hecho a mano.",
+                "offers": {
+                  "@type": "Offer",
+                  "price": "500",
+                  "priceCurrency": "UYU",
+                  "availability": "https://schema.org/InStock"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- JavaScript Lógico Diferido -->
+    <script src="script.js" defer></script>
 </head>
 
 <body>
+
+    <!-- Google Tag Manager (noscript - Primera línea del <body>) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJS222LG" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <header>
         <!-- ================= NAVEGACIÓN ================= -->
         <nav class="nav-principal" id="navegacion-principal">
@@ -1225,7 +1347,7 @@
         </svg>
     </a>
 
-    <script src="script.js"></script>
+
 
 
 </body>
