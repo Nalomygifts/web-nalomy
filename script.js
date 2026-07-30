@@ -1,5 +1,16 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    // ==========================================================================
+    // FUNCIÓN AUXILIAR: Enviar eventos a Google Tag Manager (GTM-MJS222LG)
+    // ==========================================================================
+    function registrarEventoGTM(nombreEvento, parametros = {}) {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+            'event': nombreEvento,
+            ...parametros
+        });
+    }
+
     // 1. MENÚ HAMBURGUESA
     const botonMenu = document.querySelector(".menu-toggle");
     const menuNav = document.querySelector(".nav-links");
@@ -34,6 +45,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const ctaButton = document.querySelector(".cta-button");
     if (ctaButton) {
         ctaButton.addEventListener("click", () => {
+            // Evento GTM: Clic en botón CTA principal
+            registrarEventoGTM('clic_cta_hero', {
+                'destino': '#mystic-boxes',
+                'texto_boton': ctaButton.innerText.trim()
+            });
+
             window.location.href = "#mystic-boxes";
         });
     }
@@ -45,9 +62,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const modalBody = document.getElementById('modal-contenido');
     const btnCerrar = document.getElementById('cerrar-modal');
 
-    // --- Funciones del modal definidas al nivel raíz (sin anidar en if) ---
+    // --- Funciones del modal definidas al nivel raíz ---
     async function abrirModal() {
         if (!modal || !modalBody || !btnCerrar) return;
+
+        // Evento GTM: Apertura de Modal Legal/Seguridad
+        registrarEventoGTM('abrir_modal_legal', {
+            'tipo_modal': 'Políticas y Seguridad'
+        });
 
         if (!modalBody.innerHTML.trim()) {
             try {
@@ -87,8 +109,13 @@ document.addEventListener("DOMContentLoaded", () => {
             btn.addEventListener('click', () => {
                 const cat = btn.dataset.categoria;
 
+                // Evento GTM: Filtro de FAQ interactuado
+                registrarEventoGTM('clic_faq_categoria', {
+                    'categoria_seleccionada': cat
+                });
+
                 if (cat === 'seguridad') {
-                    abrirModal(); // ahora sí es accesible
+                    abrirModal();
                     return;
                 }
 
@@ -123,5 +150,15 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener('keydown', e => {
         if (e.key === 'Escape' && modal?.classList.contains('visible')) cerrarModal();
     });
+
+    // 5. BOTÓN FLOTANTE DE WHATSAPP (Métricas de contacto)
+    const botonWhatsapp = document.querySelector('.whatsapp-flotante');
+    if (botonWhatsapp) {
+        botonWhatsapp.addEventListener('click', () => {
+            registrarEventoGTM('clic_whatsapp_flotante', {
+                'ubicacion': 'Esquina inferior derecha'
+            });
+        });
+    }
 
 });
