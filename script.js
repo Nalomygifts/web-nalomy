@@ -41,17 +41,25 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // 3. CTA BUTTON
+    // 3. CTA BUTTON (Optimizado para asegurar la captura del evento en GTM)
     const ctaButton = document.querySelector(".cta-button");
     if (ctaButton) {
-        ctaButton.addEventListener("click", () => {
+        ctaButton.addEventListener("click", (evento) => {
             // Evento GTM: Clic en botón CTA principal
             registrarEventoGTM('clic_cta_hero', {
                 'destino': '#mystic-boxes',
                 'texto_boton': ctaButton.innerText.trim()
             });
 
-            window.location.href = "#mystic-boxes";
+            // Si es un enlace o requiere scroll suave, permitimos que GTM procese la orden
+            const destino = ctaButton.getAttribute("href") || "#mystic-boxes";
+            if (destino.startsWith("#")) {
+                const elementoDestino = document.querySelector(destino);
+                if (elementoDestino) {
+                    evento.preventDefault();
+                    elementoDestino.scrollIntoView({ behavior: "smooth" });
+                }
+            }
         });
     }
 
