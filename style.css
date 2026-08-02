@@ -13,7 +13,7 @@
    ========================================================================== */
 :root {
     --fondo-Noche: #18082d;
-    --violeta-Abismo: #200040;
+    --violeta-Abismo: #2a014d;
     --color-uvaCosmos: #35155d;
     --color-uva-hover: #502b70;
     --dorado-principal: #e3b660;
@@ -134,7 +134,7 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 12px 16px;
-    background-color: var(--fondo-profundo);
+    background-color: var(--violeta-Abismo);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     z-index: 10;
 }
