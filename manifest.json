@@ -8,12 +8,12 @@
   "description": "Descubre en Nalomy nuestras Mystic Box, joyería con piedras naturales y artesanías en cemento hechas a mano. Aromas, cristales y rituales con envío gratis en Montevideo.",
   "icons": [
     {
-      "src": "imagenes/Hero/logo-nalomy-192.png",
+      "src": "imagenes/Hero/logo-nalomy-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "imagenes/Hero/logo-nalomy-512.png",
+      "src": "imagenes/Hero/logo-nalomy-512x512e.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
