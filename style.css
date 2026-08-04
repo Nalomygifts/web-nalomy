@@ -60,6 +60,7 @@ body {
 
 h1 {
     font-size: 3.0rem;
+    line-height: 1.15;
     color: var(--blanco);
     font-family: var(--font-serif);
     text-shadow: 2px 2px 10px rgba(22, 3, 46, 0.8);
@@ -1135,10 +1136,13 @@ footer>img:active {
     .hero-texto-contenido {
         transform: none;
         /* En mobile no hay espacio de sobra para subir el bloque 100px como en desktop */
+        padding: 1.5rem 1.25rem;
     }
 
     .cta-button {
         margin-top: 0;
+        padding: 0.8rem 1.8rem;
+        font-size: 1.1rem;
     }
 
     footer>img {
@@ -1203,11 +1207,12 @@ footer>img:active {
     }
 
     .hero-texto h1 {
-        font-size: 2.4rem;
+        font-size: 1.9rem;
     }
 
     .hero-texto .dorado {
-        font-size: 1.05rem;
+        font-size: 0.95rem;
+        line-height: 1.4;
     }
 
     section h2 {
