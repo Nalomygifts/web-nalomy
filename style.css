@@ -59,7 +59,7 @@ body {
 }
 
 h1 {
-    font-size: 2.0rem;
+    font-size: 3.0rem;
     color: var(--blanco);
     font-family: var(--font-serif);
     text-shadow: 2px 2px 10px rgba(22, 3, 46, 0.8);
@@ -116,7 +116,7 @@ a {
 p {
     margin-bottom: 1rem;
     line-height: 1.6;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     color: var(--dorado-suave);
     font-weight: 400;
     letter-spacing: 0.5px;
@@ -1127,8 +1127,18 @@ footer>img:active {
     }
 
     .hero-texto {
+        min-height: 100%;
         padding: 32px 20px;
         /* Texto más compacto para pantallas chicas */
+    }
+
+    .hero-texto-contenido {
+        transform: none;
+        /* En mobile no hay espacio de sobra para subir el bloque 100px como en desktop */
+    }
+
+    .cta-button {
+        margin-top: 0;
     }
 
     footer>img {
