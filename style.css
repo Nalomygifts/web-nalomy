@@ -260,7 +260,7 @@ p {
     padding: 2rem;
     border-radius: 20px;
     max-width: 650px;
-    transform: translateY(-100px);
+    transform: translateY(-70px);
 }
 
 .cta-button {
@@ -272,7 +272,7 @@ p {
     border: 1px solid var(--dorado-principal);
     border-radius: 4rem;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 700;
     font-family: var(--font-sans);
     text-decoration: none;
@@ -1134,15 +1134,13 @@ footer>img:active {
     }
 
     .hero-texto-contenido {
-        transform: none;
-        /* En mobile no hay espacio de sobra para subir el bloque 100px como en desktop */
+        transform: translateY(-55px);
+        /* Empujón chico hacia arriba, sin llegar al -100px de desktop que cortaba el texto */
         padding: 1.5rem 1.25rem;
     }
 
     .cta-button {
         margin-top: 0;
-        padding: 0.8rem 1.8rem;
-        font-size: 1.1rem;
     }
 
     footer>img {
