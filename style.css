@@ -660,6 +660,23 @@ summary {
     transform: scale(0.97);
 }
 
+
+
+
+
+
+#lista-preguntas {
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-item {
+    order: 1;
+}
+
+.faq-item--fijo {
+    order: 2;
+}
 /* ==========================================================================
    8. FOOTER
    ========================================================================== */

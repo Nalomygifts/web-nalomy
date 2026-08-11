@@ -64,12 +64,46 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 4. FAQ Y MODAL LEGAL
-    const botonesFaq = document.querySelectorAll('.faq-categoria');
+    // 4. FAQ FILTRADO POR CATEGORÍA + MODAL LEGAL
+    const contenedorCategorias = document.getElementById('categorias');
     const preguntasFaq = document.querySelectorAll('.faq-item');
+    const mensajeVacio = document.getElementById('faq-mensaje-vacio'); // opcional, puede no existir
     const modal = document.getElementById('modal-legal');
     const modalBody = document.getElementById('modal-contenido');
     const btnCerrar = document.getElementById('cerrar-modal');
+
+    // Categorías que tienen un botón de filtro real (excluye 'seguridad', que abre el modal)
+    const categoriasConBoton = contenedorCategorias
+        ? new Set(
+            Array.from(contenedorCategorias.querySelectorAll('.faq-categoria'))
+                .map(b => b.dataset.categoria)
+                .filter(cat => cat !== 'seguridad')
+        )
+        : new Set();
+
+    // Las preguntas cuya categoría NO tiene botón (ej. "productos") quedan
+    // siempre visibles y no se tocan; solo se filtran las que sí tienen botón.
+    function ocultarTodasLasPreguntas() {
+        preguntasFaq.forEach(p => {
+            if (categoriasConBoton.has(p.dataset.categoria)) {
+                p.hidden = true;
+            }
+            p.removeAttribute('open');
+        });
+        if (mensajeVacio) mensajeVacio.hidden = false;
+    }
+
+    // Muestra solo las preguntas de la categoría elegida (todas cerradas);
+    // las que no tienen botón asociado permanecen visibles siempre.
+    function mostrarCategoria(categoria) {
+        preguntasFaq.forEach(p => {
+            if (categoriasConBoton.has(p.dataset.categoria)) {
+                p.hidden = p.dataset.categoria !== categoria;
+            }
+            p.removeAttribute('open');
+        });
+        if (mensajeVacio) mensajeVacio.hidden = true;
+    }
 
     async function abrirModal() {
         if (!modal || !modalBody || !btnCerrar) return;
@@ -110,38 +144,48 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.style.overflow = '';
     }
 
-    if (botonesFaq.length > 0 && preguntasFaq.length > 0) {
-        botonesFaq.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const cat = btn.dataset.categoria;
+    if (contenedorCategorias && preguntasFaq.length > 0) {
+        const botonesFaq = contenedorCategorias.querySelectorAll('.faq-categoria');
 
-                registrarEventoGTM('clic_faq_categoria', {
-                    'categoria_seleccionada': cat
-                });
+        // Marca las preguntas sin botón de filtro (ej. "productos") como fijas,
+        // para que el CSS (order en flexbox) las muestre siempre debajo de las
+        // que sí se filtran, sin alterar el orden real del HTML fuente.
+        preguntasFaq.forEach(p => {
+            if (!categoriasConBoton.has(p.dataset.categoria)) {
+                p.classList.add('faq-item--fijo');
+            }
+        });
 
-                if (cat === 'seguridad') {
-                    abrirModal();
-                    return;
-                }
+        // Estado inicial: todo oculto y cerrado hasta que elijan una categoría
+        ocultarTodasLasPreguntas();
 
-                const yaActivo = btn.getAttribute('aria-pressed') === 'true';
-                botonesFaq.forEach(b => b.setAttribute('aria-pressed', 'false'));
+        // Delegación de eventos: un solo listener para todos los botones,
+        // sigue funcionando aunque se agreguen más categorías después
+        contenedorCategorias.addEventListener('click', (evento) => {
+            const btn = evento.target.closest('.faq-categoria');
+            if (!btn) return;
 
-                if (yaActivo) {
-                    requestAnimationFrame(() => {
-                        preguntasFaq.forEach(p => { p.hidden = false; });
-                    });
-                } else {
-                    btn.setAttribute('aria-pressed', 'true');
-                    requestAnimationFrame(() => {
-                        preguntasFaq.forEach(p => {
-                            const visible = p.dataset.categoria === cat;
-                            p.hidden = !visible;
-                            if (!visible) p.removeAttribute('open');
-                        });
-                    });
-                }
+            const cat = btn.dataset.categoria;
+
+            registrarEventoGTM('clic_faq_categoria', {
+                'categoria_seleccionada': cat
             });
+
+            if (cat === 'seguridad') {
+                abrirModal();
+                return;
+            }
+
+            const yaActivo = btn.getAttribute('aria-pressed') === 'true';
+            botonesFaq.forEach(b => b.setAttribute('aria-pressed', 'false'));
+
+            if (yaActivo) {
+                // Clickear la misma categoría de nuevo la cierra
+                ocultarTodasLasPreguntas();
+            } else {
+                btn.setAttribute('aria-pressed', 'true');
+                mostrarCategoria(cat);
+            }
         });
     }
 
