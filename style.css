@@ -549,8 +549,7 @@ summary {
 }
 
 /* Botón místico (FAQ/Consultar) */
-.btn-mistico,
-.btn-volver {
+.btn-mistico {
     display: flex;
     text-decoration: none;
     position: relative;
@@ -840,6 +839,10 @@ footer>img:active {
         fill: #fff;
         filter: drop-shadow(0 0 5px #e6ca65);
     }
+}
+
+.footer-nalomy>img {
+    cursor: pointer;
 }
 
 /* WhatsApp en footer */
@@ -1274,3 +1277,11 @@ footer>img:active {
         max-height: 90vh;
     }
 }
+/* Botones CTA compactos y centrados */
+.btn-mistico {
+    width: fit-content;
+    margin: 1rem auto 0;
+    justify-content: center;
+    align-items: center;
+}
+

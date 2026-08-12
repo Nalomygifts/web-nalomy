@@ -210,3 +210,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 });
+
+/*fooerlogovolver al inicio*/
+
+const logoFooter = document.querySelector('.footer-nalomy > img');
+
+if (logoFooter) {
+    logoFooter.addEventListener('click', () => {
+        window.location.href = 'index.html';
+    });
+
+    logoFooter.setAttribute('role', 'link');
+    logoFooter.setAttribute('tabindex', '0');
+    logoFooter.setAttribute('aria-label', 'Volver al inicio');
+
+    logoFooter.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            window.location.href = 'index.html';
+        }
+    });
+}
