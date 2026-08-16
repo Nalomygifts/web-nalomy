@@ -333,7 +333,7 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
     gap: var(--space-lg);
-    align-items: start;
+    align-items: stretch;
     margin-bottom: var(--space-lg);
 }
 
