@@ -1285,3 +1285,132 @@ footer>img:active {
     align-items: center;
 }
 
+
+
+
+/* ===== TABLA COMPARATIVA MYSTIC BOX ===== */
+.tabla-comparativa-wrapper {
+    margin: 2rem auto 3rem;
+    max-width: 900px;
+    overflow-x: auto;
+}
+
+.tabla-mystic-box {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-sans);
+    background-color: var(--color-uvaCosmos);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(227, 182, 96, 0.15);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.tabla-mystic-box caption.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
+
+.tabla-mystic-box th,
+.tabla-mystic-box td {
+    padding: 0.9rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(227, 182, 96, 0.15);
+}
+
+.tabla-mystic-box thead th {
+    background-color: var(--violeta-Abismo);
+    color: var(--blanco);
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+.tabla-mystic-box tbody th[scope="row"] {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    color: var(--dorado-principal);
+}
+
+.tabla-mystic-box tbody td {
+    color: var(--dorado-suave);
+    font-size: 0.9rem;
+}
+
+.tabla-mystic-box tbody tr:hover {
+    background-color: var(--color-uva-hover);
+}
+
+.tabla-mystic-box tbody tr:last-child td,
+.tabla-mystic-box tbody tr:last-child th {
+    border-bottom: none;
+}
+
+.link-tabla {
+    color: var(--dorado-principal);
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color var(--transition-base);
+}
+
+.link-tabla:hover,
+.link-tabla:focus-visible {
+    color: var(--dorado-suave);
+    text-decoration: underline;
+}
+
+/* ===== MOBILE: tabla se convierte en tarjetas apiladas ===== */
+@media (max-width: 640px) {
+    .tabla-mystic-box thead {
+        display: none;
+    }
+
+    .tabla-mystic-box,
+    .tabla-mystic-box tbody,
+    .tabla-mystic-box tr,
+    .tabla-mystic-box td,
+    .tabla-mystic-box th {
+        display: block;
+        width: 100%;
+    }
+
+    .tabla-mystic-box tr {
+        margin-bottom: 1rem;
+        border-radius: 10px;
+        border: 1px solid rgba(227, 182, 96, 0.2);
+        overflow: hidden;
+    }
+
+    .tabla-mystic-box tbody th[scope="row"] {
+        background-color: var(--violeta-Abismo);
+        color: var(--dorado-principal);
+        font-size: 1.05rem;
+        padding: 0.8rem 1rem;
+        border-bottom: none;
+    }
+
+    .tabla-mystic-box td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgba(227, 182, 96, 0.1);
+    }
+
+    .tabla-mystic-box td[data-label]:not([data-label=""])::before {
+        content: attr(data-label);
+        font-weight: 700;
+        color: var(--dorado-principal);
+        margin-right: 1rem;
+    }
+
+    .tabla-mystic-box td:last-child {
+        justify-content: center;
+        border-bottom: none;
+        padding: 1rem;
+    }
+}
