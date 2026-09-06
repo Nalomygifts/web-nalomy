@@ -1,4 +1,3 @@
-// ==========================================================================
 // INICIALIZACIÓN GLOBAL DE LA CAPA DE DATOS
 // (Garantiza que 'window.dataLayer' exista desde el inicio)
 // ==========================================================================
