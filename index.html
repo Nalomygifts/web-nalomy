@@ -71,563 +71,761 @@
     <meta property="og:locale" content="es_UY" />
 
     <!-- Datos Estructurados Schema.org (JSON-LD) -->
-    <script type="application/ld+json">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "LocalBusiness",
+      "@id": "https://nalomy.vercel.app/#organization",
+      "name": "Nalomy",
+      "url": "https://nalomy.vercel.app/",
+      "logo": "https://nalomy.vercel.app/imagenes/Hero/el_logo-nalomy.png",
+      "image": "https://nalomy.vercel.app/imagenes/Hero/hero-serenidad-florecer.webp",
+      "description": "Joyería holística en piedras naturales y artesanías en cemento hechas a mano.",
+      "telephone": "+59899380784",
+      "email": "nalomygifts@gmail.com",
+      "priceRange": "$500 - $850 UYU",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Montevideo",
+        "addressCountry": "UY"
+      },
+      "areaServed": [
         {
-          "@type": "LocalBusiness",
-          "@id": "https://nalomy.vercel.app/#organization",
-          "name": "Nalomy",
-          "url": "https://nalomy.vercel.app/",
-          "logo": "https://nalomy.vercel.app/imagenes/Hero/el_logo-nalomy.png",
-          "image": "https://nalomy.vercel.app/imagenes/Hero/hero-serenidad-florecer.webp",
-          "description": "Joyería holística en piedras naturales y artesanías en cemento hechas a mano.",
-          "telephone": "+59899380784",
-          "email": "nalomygifts@gmail.com",
-          "priceRange": "$500 - $850 UYU",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Montevideo",
-            "addressCountry": "UY"
-          },
-          "areaServed": [
-            {
-              "@type": "AdministrativeArea",
-              "name": "Montevideo"
-            },
-            {
-              "@type": "Country",
-              "name": "Uruguay"
-            }
-          ]
+          "@type": "AdministrativeArea",
+          "name": "Montevideo"
         },
         {
-          "@type": "ItemList",
-          "name": "Catálogo de Productos",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "item": {
-                "@type": "Product",
-                "name": "Mystic Box Serenidad",
-                "description": "Kit energético con piedra Amatista. Intención: Serenidad y pausa.",
-                "image": "https://nalomy.vercel.app/imagenes/MysticsBox/Serenidad-Amatista/serenidad-caja-800x1200.webp",
-                "brand": {
-                  "@type": "Brand",
-                  "name": "Nalomy"
+          "@type": "Country",
+          "name": "Uruguay"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Catálogo de Productos",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Product",
+            "name": "Mystic Box Serenidad",
+            "description": "Kit energético con piedra Amatista. Intención: Serenidad y pausa.",
+            "image": "https://nalomy.vercel.app/imagenes/MysticsBox/Serenidad-Amatista/serenidad-caja-800x1200.webp",
+            "brand": {
+              "@type": "Brand",
+              "name": "Nalomy"
+            },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://nalomy.vercel.app/mystic-box-serenidad.html",
+              "price": "850",
+              "priceCurrency": "UYU",
+              "availability": "https://schema.org/InStock",
+              "itemCondition": "https://schema.org/NewCondition",
+              "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "applicableCountry": "UY",
+                "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+              },
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingRate": {
+                  "@type": "MonetaryAmount",
+                  "value": "0",
+                  "currency": "UYU"
                 },
-                "offers": {
-                  "@type": "Offer",
-                  "url": "https://nalomy.vercel.app/mystic-box-serenidad.html",
-                  "price": "850",
-                  "priceCurrency": "UYU",
-                  "availability": "https://schema.org/InStock",
-                  "itemCondition": "https://schema.org/NewCondition",
-                  "hasMerchantReturnPolicy": {
-                    "@type": "MerchantReturnPolicy",
-                    "applicableCountry": "UY",
-                    "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "UY",
+                  "addressRegion": "Montevideo"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
                   },
-                  "shippingDetails": {
-                    "@type": "OfferShippingDetails",
-                    "shippingRate": {
-                      "@type": "MonetaryAmount",
-                      "value": "0",
-                      "currency": "UYU"
-                    },
-                    "shippingDestination": {
-                      "@type": "DefinedRegion",
-                      "addressCountry": "UY",
-                      "addressRegion": "Montevideo"
-                    },
-                    "deliveryTime": {
-                      "@type": "ShippingDeliveryTime",
-                      "handlingTime": {
-                        "@type": "QuantitativeValue",
-                        "minValue": 0,
-                        "maxValue": 1,
-                        "unitCode": "DAY"
-                      },
-                      "transitTime": {
-                        "@type": "QuantitativeValue",
-                        "minValue": 1,
-                        "maxValue": 2,
-                        "unitCode": "DAY"
-                      }
-                    }
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
                   }
-                }
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "item": {
-                "@type": "Product",
-                "name": "Mystic Box Armonía",
-                "description": "Kit energético con piedra Cuarzo Rosa. Intención: Autoestima y apertura.",
-                "image": "https://nalomy.vercel.app/imagenes/MysticsBox/ArmoniaCuarzo-rosa/mystic-box-armonia-caja-abierta.webp",
-                "brand": {
-                  "@type": "Brand",
-                  "name": "Nalomy"
-                },
-                "offers": {
-                  "@type": "Offer",
-                  "url": "https://nalomy.vercel.app/mystic-box-armonia.html",
-                  "price": "850",
-                  "priceCurrency": "UYU",
-                  "availability": "https://schema.org/InStock",
-                  "itemCondition": "https://schema.org/NewCondition",
-                  "hasMerchantReturnPolicy": {
-                    "@type": "MerchantReturnPolicy",
-                    "applicableCountry": "UY",
-                    "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-                  },
-                  "shippingDetails": {
-                    "@type": "OfferShippingDetails",
-                    "shippingRate": {
-                      "@type": "MonetaryAmount",
-                      "value": "0",
-                      "currency": "UYU"
-                    },
-                    "shippingDestination": {
-                      "@type": "DefinedRegion",
-                      "addressCountry": "UY",
-                      "addressRegion": "Montevideo"
-                    },
-                    "deliveryTime": {
-                      "@type": "ShippingDeliveryTime",
-                      "handlingTime": {
-                        "@type": "QuantitativeValue",
-                        "minValue": 0,
-                        "maxValue": 1,
-                        "unitCode": "DAY"
-                      },
-                      "transitTime": {
-                        "@type": "QuantitativeValue",
-                        "minValue": 1,
-                        "maxValue": 2,
-                        "unitCode": "DAY"
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "item": {
-                "@type": "Product",
-                "name": "Mystic Box 7 Chakras",
-                "description": "Kit energético con 7 piedras naturales para alinear cuerpo, mente y espíritu.",
-                "image": "https://nalomy.vercel.app/imagenes/MysticsBox/7chakras/mystic-box-7chakras-piedras-chatas-optimizado.webp",
-                "brand": {
-                  "@type": "Brand",
-                  "name": "Nalomy"
-                },
-                "offers": {
-                  "@type": "Offer",
-                  "url": "https://nalomy.vercel.app/mystic-box-7chakras.html",
-                  "price": "750",
-                  "priceCurrency": "UYU",
-                  "availability": "https://schema.org/InStock",
-                  "itemCondition": "https://schema.org/NewCondition",
-                  "hasMerchantReturnPolicy": {
-                    "@type": "MerchantReturnPolicy",
-                    "applicableCountry": "UY",
-                    "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-                  },
-                  "shippingDetails": {
-                    "@type": "OfferShippingDetails",
-                    "shippingRate": {
-                      "@type": "MonetaryAmount",
-                      "value": "0",
-                      "currency": "UYU"
-                    },
-                    "shippingDestination": {
-                      "@type": "DefinedRegion",
-                      "addressCountry": "UY",
-                      "addressRegion": "Montevideo"
-                    },
-                    "deliveryTime": {
-                      "@type": "ShippingDeliveryTime",
-                      "handlingTime": {
-                        "@type": "QuantitativeValue",
-                        "minValue": 0,
-                        "maxValue": 1,
-                        "unitCode": "DAY"
-                      },
-                      "transitTime": {
-                        "@type": "QuantitativeValue",
-                        "minValue": 1,
-                        "maxValue": 2,
-                        "unitCode": "DAY"
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 4,
-              "item": {
-                "@type": "Product",
-                "name": "Mystic Box Protección",
-                "description": "Kit energético con Ojo de Tigre, Hematites y Turmalina Negra. Intención: Protección, éxito y manifestación.",
-                "image": "https://nalomy.vercel.app/imagenes/MysticsBox/proteccion/proteccion-fuera-caja.webp",
-                "brand": {
-                  "@type": "Brand",
-                  "name": "Nalomy"
-                },
-                "offers": {
-                  "@type": "Offer",
-                  "url": "https://nalomy.vercel.app/mystic-box-proteccion.html",
-                  "price": "850",
-                  "priceCurrency": "UYU",
-                  "availability": "https://schema.org/InStock",
-                  "itemCondition": "https://schema.org/NewCondition",
-                  "hasMerchantReturnPolicy": {
-                    "@type": "MerchantReturnPolicy",
-                    "applicableCountry": "UY",
-                    "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-                  },
-                  "shippingDetails": {
-                    "@type": "OfferShippingDetails",
-                    "shippingRate": {
-                      "@type": "MonetaryAmount",
-                      "value": "0",
-                      "currency": "UYU"
-                    },
-                    "shippingDestination": {
-                      "@type": "DefinedRegion",
-                      "addressCountry": "UY",
-                      "addressRegion": "Montevideo"
-                    },
-                    "deliveryTime": {
-                      "@type": "ShippingDeliveryTime",
-                      "handlingTime": {
-                        "@type": "QuantitativeValue",
-                        "minValue": 0,
-                        "maxValue": 1,
-                        "unitCode": "DAY"
-                      },
-                      "transitTime": {
-                        "@type": "QuantitativeValue",
-                        "minValue": 1,
-                        "maxValue": 2,
-                        "unitCode": "DAY"
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 5,
-              "item": {
-                "@type": "Product",
-                "name": "Mystic Box Intuición",
-                "description": "Kit energético con piedra Lapislázuli. Intención: Intuición, expresión y conexión.",
-                "image": "https://nalomy.vercel.app/imagenes/MysticsBox/Intuicion/mystic-box-intuicion-caja-aberta.webp",
-                "brand": {
-                  "@type": "Brand",
-                  "name": "Nalomy"
-                },
-                "offers": {
-                  "@type": "Offer",
-                  "url": "https://nalomy.vercel.app/mystic-box-intuicion.html",
-                  "price": "850",
-                  "priceCurrency": "UYU",
-                  "availability": "https://schema.org/InStock",
-                  "itemCondition": "https://schema.org/NewCondition",
-                  "hasMerchantReturnPolicy": {
-                    "@type": "MerchantReturnPolicy",
-                    "applicableCountry": "UY",
-                    "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-                  },
-                  "shippingDetails": {
-                    "@type": "OfferShippingDetails",
-                    "shippingRate": {
-                      "@type": "MonetaryAmount",
-                      "value": "0",
-                      "currency": "UYU"
-                    },
-                    "shippingDestination": {
-                      "@type": "DefinedRegion",
-                      "addressCountry": "UY",
-                      "addressRegion": "Montevideo"
-                    },
-                    "deliveryTime": {
-                      "@type": "ShippingDeliveryTime",
-                      "handlingTime": {
-                        "@type": "QuantitativeValue",
-                        "minValue": 0,
-                        "maxValue": 1,
-                        "unitCode": "DAY"
-                      },
-                      "transitTime": {
-                        "@type": "QuantitativeValue",
-                        "minValue": 1,
-                        "maxValue": 2,
-                        "unitCode": "DAY"
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 6,
-              "item": {
-                "@type": "Product",
-                "name": "Mystic Box Libertad",
-                "description": "Kit energético con piedra Amazonita. Intención: Libertad, apertura y fluir.",
-                "image": "https://nalomy.vercel.app/imagenes/MysticsBox/Libertad/caja-mystic-box-libertad.webp",
-                "brand": {
-                  "@type": "Brand",
-                  "name": "Nalomy"
-                },
-                "offers": {
-                  "@type": "Offer",
-                  "url": "https://nalomy.vercel.app/mystic-box-libertad.html",
-                  "price": "850",
-                  "priceCurrency": "UYU",
-                  "availability": "https://schema.org/InStock",
-                  "itemCondition": "https://schema.org/NewCondition",
-                  "hasMerchantReturnPolicy": {
-                    "@type": "MerchantReturnPolicy",
-                    "applicableCountry": "UY",
-                    "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-                  },
-                  "shippingDetails": {
-                    "@type": "OfferShippingDetails",
-                    "shippingRate": {
-                      "@type": "MonetaryAmount",
-                      "value": "0",
-                      "currency": "UYU"
-                    },
-                    "shippingDestination": {
-                      "@type": "DefinedRegion",
-                      "addressCountry": "UY",
-                      "addressRegion": "Montevideo"
-                    },
-                    "deliveryTime": {
-                      "@type": "ShippingDeliveryTime",
-                      "handlingTime": {
-                        "@type": "QuantitativeValue",
-                        "minValue": 0,
-                        "maxValue": 1,
-                        "unitCode": "DAY"
-                      },
-                      "transitTime": {
-                        "@type": "QuantitativeValue",
-                        "minValue": 1,
-                        "maxValue": 2,
-                        "unitCode": "DAY"
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 7,
-              "item": {
-                "@type": "Product",
-                "name": "Mystic Box Fortaleza",
-                "description": "Kit energético con piedra Ónix. Intención: Fortaleza y protección.",
-                "image": "https://nalomy.vercel.app/imagenes/MysticsBox/Fortaleza/mystic-box-fortaleza-doscajas-optimizado.webp",
-                "brand": {
-                  "@type": "Brand",
-                  "name": "Nalomy"
-                },
-                "offers": {
-                  "@type": "Offer",
-                  "url": "https://nalomy.vercel.app/mystic-box-fortaleza.html",
-                  "price": "850",
-                  "priceCurrency": "UYU",
-                  "availability": "https://schema.org/InStock",
-                  "itemCondition": "https://schema.org/NewCondition",
-                  "hasMerchantReturnPolicy": {
-                    "@type": "MerchantReturnPolicy",
-                    "applicableCountry": "UY",
-                    "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-                  },
-                  "shippingDetails": {
-                    "@type": "OfferShippingDetails",
-                    "shippingRate": {
-                      "@type": "MonetaryAmount",
-                      "value": "0",
-                      "currency": "UYU"
-                    },
-                    "shippingDestination": {
-                      "@type": "DefinedRegion",
-                      "addressCountry": "UY",
-                      "addressRegion": "Montevideo"
-                    },
-                    "deliveryTime": {
-                      "@type": "ShippingDeliveryTime",
-                      "handlingTime": {
-                        "@type": "QuantitativeValue",
-                        "minValue": 0,
-                        "maxValue": 1,
-                        "unitCode": "DAY"
-                      },
-                      "transitTime": {
-                        "@type": "QuantitativeValue",
-                        "minValue": 1,
-                        "maxValue": 2,
-                        "unitCode": "DAY"
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 8,
-              "item": {
-                "@type": "Product",
-                "name": "Set Protección: los 4 Monjes sabios",
-                "description": "Set decorativo artesanal en cemento hecho a mano.",
-                "image": "https://nalomy.vercel.app/imagenes/Sets/set-proteccion-4monjes-transformed.webp",
-                "brand": {
-                  "@type": "Brand",
-                  "name": "Nalomy"
-                },
-                "offers": {
-                  "@type": "Offer",
-                  "url": "https://nalomy.vercel.app/#set-proteccion",
-                  "price": "500",
-                  "priceCurrency": "UYU",
-                  "availability": "https://schema.org/InStock",
-                  "itemCondition": "https://schema.org/NewCondition"
-                }
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 9,
-              "item": {
-                "@type": "Product",
-                "name": "Set Florecer: Un nuevo ciclo comienza",
-                "description": "Set decorativo artesanal en cemento hecho a mano.",
-                "image": "https://nalomy.vercel.app/imagenes/Sets/set-florecer-cobre-optimizado.webp",
-                "brand": {
-                  "@type": "Brand",
-                  "name": "Nalomy"
-                },
-                "offers": {
-                  "@type": "Offer",
-                  "url": "https://nalomy.vercel.app/#set-florecer",
-                  "price": "500",
-                  "priceCurrency": "UYU",
-                  "availability": "https://schema.org/InStock",
-                  "itemCondition": "https://schema.org/NewCondition"
-                }
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 10,
-              "item": {
-                "@type": "Product",
-                "name": "Set Armonía: Tu tesoro interior",
-                "description": "Set decorativo artesanal en cemento hecho a mano.",
-                "image": "https://nalomy.vercel.app/imagenes/Sets/set-armonia-optimizado-verde.webp",
-                "brand": {
-                  "@type": "Brand",
-                  "name": "Nalomy"
-                },
-                "offers": {
-                  "@type": "Offer",
-                  "url": "https://nalomy.vercel.app/#set-armonia",
-                  "price": "500",
-                  "priceCurrency": "UYU",
-                  "availability": "https://schema.org/InStock",
-                  "itemCondition": "https://schema.org/NewCondition"
-                }
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 11,
-              "item": {
-                "@type": "Product",
-                "name": "Set Luz: Tu Altar de Manifestación",
-                "description": "Set decorativo artesanal en cemento hecho a mano.",
-                "image": "https://nalomy.vercel.app/imagenes/Sets/set-luz-fucsia-artesanal-transformed.webp",
-                "brand": {
-                  "@type": "Brand",
-                  "name": "Nalomy"
-                },
-                "offers": {
-                  "@type": "Offer",
-                  "url": "https://nalomy.vercel.app/#producto-set-luz",
-                  "price": "500",
-                  "priceCurrency": "UYU",
-                  "availability": "https://schema.org/InStock",
-                  "itemCondition": "https://schema.org/NewCondition"
-                }
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 12,
-              "item": {
-                "@type": "Product",
-                "name": "Set Equilibrio: Alma, Mente y Espíritu",
-                "description": "Set decorativo artesanal en cemento hecho a mano.",
-                "image": "https://nalomy.vercel.app/imagenes/Sets/SETEquilibrio-rosa-ezgif.com-optiwebp.webp",
-                "brand": {
-                  "@type": "Brand",
-                  "name": "Nalomy"
-                },
-                "offers": {
-                  "@type": "Offer",
-                  "url": "https://nalomy.vercel.app/#producto-set-equilibrio",
-                  "price": "500",
-                  "priceCurrency": "UYU",
-                  "availability": "https://schema.org/InStock",
-                  "itemCondition": "https://schema.org/NewCondition"
-                }
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 13,
-              "item": {
-                "@type": "Product",
-                "name": "Set Zen: Protección y Calma",
-                "description": "Set decorativo artesanal en cemento hecho a mano.",
-                "image": "https://nalomy.vercel.app/imagenes/Sets/set-zen-proteccion-transformed.webp",
-                "brand": {
-                  "@type": "Brand",
-                  "name": "Nalomy"
-                },
-                "offers": {
-                  "@type": "Offer",
-                  "url": "https://nalomy.vercel.app/#set-zen",
-                  "price": "500",
-                  "priceCurrency": "UYU",
-                  "availability": "https://schema.org/InStock",
-                  "itemCondition": "https://schema.org/NewCondition"
                 }
               }
             }
-          ]
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Product",
+            "name": "Mystic Box Armonía",
+            "description": "Kit energético con piedra Cuarzo Rosa. Intención: Autoestima y apertura.",
+            "image": "https://nalomy.vercel.app/imagenes/MysticsBox/ArmoniaCuarzo-rosa/mystic-box-armonia-caja-abierta.webp",
+            "brand": {
+              "@type": "Brand",
+              "name": "Nalomy"
+            },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://nalomy.vercel.app/mystic-box-armonia.html",
+              "price": "850",
+              "priceCurrency": "UYU",
+              "availability": "https://schema.org/InStock",
+              "itemCondition": "https://schema.org/NewCondition",
+              "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "applicableCountry": "UY",
+                "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+              },
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingRate": {
+                  "@type": "MonetaryAmount",
+                  "value": "0",
+                  "currency": "UYU"
+                },
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "UY",
+                  "addressRegion": "Montevideo"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Product",
+            "name": "Mystic Box 7 Chakras",
+            "description": "Kit energético con 7 piedras naturales para alinear cuerpo, mente y espíritu.",
+            "image": "https://nalomy.vercel.app/imagenes/MysticsBox/7chakras/mystic-box-7chakras-piedras-chatas-optimizado.webp",
+            "brand": {
+              "@type": "Brand",
+              "name": "Nalomy"
+            },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://nalomy.vercel.app/mystic-box-7chakras.html",
+              "price": "750",
+              "priceCurrency": "UYU",
+              "availability": "https://schema.org/InStock",
+              "itemCondition": "https://schema.org/NewCondition",
+              "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "applicableCountry": "UY",
+                "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+              },
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingRate": {
+                  "@type": "MonetaryAmount",
+                  "value": "0",
+                  "currency": "UYU"
+                },
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "UY",
+                  "addressRegion": "Montevideo"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "Product",
+            "name": "Mystic Box Protección",
+            "description": "Kit energético con Ojo de Tigre, Hematites y Turmalina Negra. Intención: Protección, éxito y manifestación.",
+            "image": "https://nalomy.vercel.app/imagenes/MysticsBox/proteccion/proteccion-fuera-caja.webp",
+            "brand": {
+              "@type": "Brand",
+              "name": "Nalomy"
+            },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://nalomy.vercel.app/mystic-box-proteccion.html",
+              "price": "850",
+              "priceCurrency": "UYU",
+              "availability": "https://schema.org/InStock",
+              "itemCondition": "https://schema.org/NewCondition",
+              "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "applicableCountry": "UY",
+                "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+              },
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingRate": {
+                  "@type": "MonetaryAmount",
+                  "value": "0",
+                  "currency": "UYU"
+                },
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "UY",
+                  "addressRegion": "Montevideo"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "Product",
+            "name": "Mystic Box Intuición",
+            "description": "Kit energético con piedra Lapislázuli. Intención: Intuición, expresión y conexión.",
+            "image": "https://nalomy.vercel.app/imagenes/MysticsBox/Intuicion/mystic-box-intuicion-caja-aberta.webp",
+            "brand": {
+              "@type": "Brand",
+              "name": "Nalomy"
+            },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://nalomy.vercel.app/mystic-box-intuicion.html",
+              "price": "850",
+              "priceCurrency": "UYU",
+              "availability": "https://schema.org/InStock",
+              "itemCondition": "https://schema.org/NewCondition",
+              "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "applicableCountry": "UY",
+                "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+              },
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingRate": {
+                  "@type": "MonetaryAmount",
+                  "value": "0",
+                  "currency": "UYU"
+                },
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "UY",
+                  "addressRegion": "Montevideo"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "Product",
+            "name": "Mystic Box Libertad",
+            "description": "Kit energético con piedra Amazonita. Intención: Libertad, apertura y fluir.",
+            "image": "https://nalomy.vercel.app/imagenes/MysticsBox/Libertad/caja-mystic-box-libertad.webp",
+            "brand": {
+              "@type": "Brand",
+              "name": "Nalomy"
+            },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://nalomy.vercel.app/mystic-box-libertad.html",
+              "price": "850",
+              "priceCurrency": "UYU",
+              "availability": "https://schema.org/InStock",
+              "itemCondition": "https://schema.org/NewCondition",
+              "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "applicableCountry": "UY",
+                "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+              },
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingRate": {
+                  "@type": "MonetaryAmount",
+                  "value": "0",
+                  "currency": "UYU"
+                },
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "UY",
+                  "addressRegion": "Montevideo"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "item": {
+            "@type": "Product",
+            "name": "Mystic Box Fortaleza",
+            "description": "Kit energético con piedra Ónix. Intención: Fortaleza y protección.",
+            "image": "https://nalomy.vercel.app/imagenes/MysticsBox/Fortaleza/mystic-box-fortaleza-doscajas-optimizado.webp",
+            "brand": {
+              "@type": "Brand",
+              "name": "Nalomy"
+            },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://nalomy.vercel.app/mystic-box-fortaleza.html",
+              "price": "850",
+              "priceCurrency": "UYU",
+              "availability": "https://schema.org/InStock",
+              "itemCondition": "https://schema.org/NewCondition",
+              "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "applicableCountry": "UY",
+                "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+              },
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingRate": {
+                  "@type": "MonetaryAmount",
+                  "value": "0",
+                  "currency": "UYU"
+                },
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "UY",
+                  "addressRegion": "Montevideo"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "item": {
+            "@type": "Product",
+            "name": "Set Protección: los 4 Monjes sabios",
+            "description": "Set decorativo artesanal en cemento hecho a mano.",
+            "image": "https://nalomy.vercel.app/imagenes/Sets/set-proteccion-4monjes-transformed.webp",
+            "brand": {
+              "@type": "Brand",
+              "name": "Nalomy"
+            },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://nalomy.vercel.app/#set-proteccion",
+              "price": "500",
+              "priceCurrency": "UYU",
+              "availability": "https://schema.org/InStock",
+              "itemCondition": "https://schema.org/NewCondition",
+              "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "applicableCountry": "UY",
+                "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+              },
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingRate": {
+                  "@type": "MonetaryAmount",
+                  "value": "0",
+                  "currency": "UYU"
+                },
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "UY",
+                  "addressRegion": "Montevideo"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "item": {
+            "@type": "Product",
+            "name": "Set Florecer: Un nuevo ciclo comienza",
+            "description": "Set decorativo artesanal en cemento hecho a mano.",
+            "image": "https://nalomy.vercel.app/imagenes/Sets/set-florecer-cobre-optimizado.webp",
+            "brand": {
+              "@type": "Brand",
+              "name": "Nalomy"
+            },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://nalomy.vercel.app/#set-florecer",
+              "price": "500",
+              "priceCurrency": "UYU",
+              "availability": "https://schema.org/InStock",
+              "itemCondition": "https://schema.org/NewCondition",
+              "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "applicableCountry": "UY",
+                "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+              },
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingRate": {
+                  "@type": "MonetaryAmount",
+                  "value": "0",
+                  "currency": "UYU"
+                },
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "UY",
+                  "addressRegion": "Montevideo"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "item": {
+            "@type": "Product",
+            "name": "Set Armonía: Tu tesoro interior",
+            "description": "Set decorativo artesanal en cemento hecho a mano.",
+            "image": "https://nalomy.vercel.app/imagenes/Sets/set-armonia-optimizado-verde.webp",
+            "brand": {
+              "@type": "Brand",
+              "name": "Nalomy"
+            },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://nalomy.vercel.app/#set-armonia",
+              "price": "500",
+              "priceCurrency": "UYU",
+              "availability": "https://schema.org/InStock",
+              "itemCondition": "https://schema.org/NewCondition",
+              "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "applicableCountry": "UY",
+                "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+              },
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingRate": {
+                  "@type": "MonetaryAmount",
+                  "value": "0",
+                  "currency": "UYU"
+                },
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "UY",
+                  "addressRegion": "Montevideo"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "item": {
+            "@type": "Product",
+            "name": "Set Luz: Tu Altar de Manifestación",
+            "description": "Set decorativo artesanal en cemento hecho a mano.",
+            "image": "https://nalomy.vercel.app/imagenes/Sets/set-luz-fucsia-artesanal-transformed.webp",
+            "brand": {
+              "@type": "Brand",
+              "name": "Nalomy"
+            },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://nalomy.vercel.app/#producto-set-luz",
+              "price": "500",
+              "priceCurrency": "UYU",
+              "availability": "https://schema.org/InStock",
+              "itemCondition": "https://schema.org/NewCondition",
+              "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "applicableCountry": "UY",
+                "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+              },
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingRate": {
+                  "@type": "MonetaryAmount",
+                  "value": "0",
+                  "currency": "UYU"
+                },
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "UY",
+                  "addressRegion": "Montevideo"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "item": {
+            "@type": "Product",
+            "name": "Set Equilibrio: Alma, Mente y Espíritu",
+            "description": "Set decorativo artesanal en cemento hecho a mano.",
+            "image": "https://nalomy.vercel.app/imagenes/Sets/SETEquilibrio-rosa-ezgif.com-optiwebp.webp",
+            "brand": {
+              "@type": "Brand",
+              "name": "Nalomy"
+            },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://nalomy.vercel.app/#producto-set-equilibrio",
+              "price": "500",
+              "priceCurrency": "UYU",
+              "availability": "https://schema.org/InStock",
+              "itemCondition": "https://schema.org/NewCondition",
+              "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "applicableCountry": "UY",
+                "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+              },
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingRate": {
+                  "@type": "MonetaryAmount",
+                  "value": "0",
+                  "currency": "UYU"
+                },
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "UY",
+                  "addressRegion": "Montevideo"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "item": {
+            "@type": "Product",
+            "name": "Set Zen: Protección y Calma",
+            "description": "Set decorativo artesanal en cemento hecho a mano.",
+            "image": "https://nalomy.vercel.app/imagenes/Sets/set-zen-proteccion-transformed.webp",
+            "brand": {
+              "@type": "Brand",
+              "name": "Nalomy"
+            },
+            "offers": {
+              "@type": "Offer",
+              "url": "https://nalomy.vercel.app/#set-zen",
+              "price": "500",
+              "priceCurrency": "UYU",
+              "availability": "https://schema.org/InStock",
+              "itemCondition": "https://schema.org/NewCondition",
+              "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "applicableCountry": "UY",
+                "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+              },
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingRate": {
+                  "@type": "MonetaryAmount",
+                  "value": "0",
+                  "currency": "UYU"
+                },
+                "shippingDestination": {
+                  "@type": "DefinedRegion",
+                  "addressCountry": "UY",
+                  "addressRegion": "Montevideo"
+                },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 0,
+                    "maxValue": 1,
+                    "unitCode": "DAY"
+                  },
+                  "transitTime": {
+                    "@type": "QuantitativeValue",
+                    "minValue": 1,
+                    "maxValue": 2,
+                    "unitCode": "DAY"
+                  }
+                }
+              }
+            }
+          }
         }
       ]
     }
-    </script>
+  ]
+}
+</script>
     <!-- JavaScript Lógico Diferido -->
     <script src="script.js" defer></script>
 
