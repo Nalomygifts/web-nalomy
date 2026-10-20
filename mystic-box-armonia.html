@@ -45,83 +45,57 @@
 
     <!-- ================= DATOS ESTRUCTURADOS ================= -->
 
-    <script type="application/ld+json">
-
+<script type="application/ld+json">
 {
-    "@context": "https://schema.org",
-    "@graph": [
-
-        {
-            "@type": "Product",
-            "name": "Mystic Box Armonía",
-
-            "description":
-                "Kit energético con collar y caravanas de Cuarzo Rosa, hornito difusor artesanal, velas, esencia de rosa, porta-sahumerios y guía de ritual de limpieza y activación energética.",
-
-            "image":
-                "https://nalomy.vercel.app/imagenes/MysticsBox/ArmoniaCuarzo-rosa/mystic-box-armonia-caja-abierta.webp",
-
-            "brand": {
-                "@type": "Brand",
-                "name": "Nalomy"
-            },
-
-            "offers": {
-                "@type": "Offer",
-                "price": "850",
-                "priceCurrency": "UYU",
-                "availability": "https://schema.org/InStock",
-                "url": "https://nalomy.vercel.app/mystic-box-armonia.html",
-
-                "shippingDetails": {
-                    "@type": "OfferShippingDetails",
-                    "shippingDestination": {
-                        "@type": "DefinedRegion",
-                        "addressCountry": "UY"
-                    },
-                    "comment":
-                        "Envío gratis en todo Montevideo de Montevideo. Envíos al interior por cuenta del cliente en la agencia de su preferencia."
-                }
-            }
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "Mystic Box Armonía",
+      "description": "Kit energético con collar y caravanas de Cuarzo Rosa, hornito difusor artesanal, velas, esencia de rosa, porta-sahumerios y guía de ritual de limpieza y activación energética.",
+      "image": [
+        "https://nalomy.vercel.app/imagenes/MysticsBox/ArmoniaCuarzo-rosa/mystic-box-armonia-caja-abierta.webp",
+        "https://nalomy.vercel.app/imagenes/MysticsBox/ArmoniaCuarzo-rosa/mystic-box-armonia-todo-en-uso-600x600.webp"
+      ],
+      "brand": { "@type": "Brand", "name": "Nalomy" },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://nalomy.vercel.app/mystic-box-armonia.html",
+        "price": "850",
+        "priceCurrency": "UYU",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "UY",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
         },
-
-
-        {
-            "@type": "BreadcrumbList",
-
-            "itemListElement": [
-
-                {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "Inicio",
-                    "item":
-                        "https://nalomy.vercel.app/"
-                },
-
-                {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "Mystic Box",
-                    "item":
-                        "https://nalomy.vercel.app/index.html#mystic-boxes"
-                },
-
-                {
-                    "@type": "ListItem",
-                    "position": 3,
-                    "name": "Armonía",
-                    "item":
-                        "https://nalomy.vercel.app/mystic-box-armonia.html"
-                }
-
-            ]
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "UYU" },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "UY",
+            "addressRegion": "Montevideo"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+            "transitTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 2, "unitCode": "DAY" }
+          }
         }
-
-    ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://nalomy.vercel.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Mystic Box Armonía", "item": "https://nalomy.vercel.app/mystic-box-armonia.html" }
+      ]
+    }
+  ]
 }
-
-    </script>
+</script>
 
     <!-- ================= FUENTES ================= -->
 
@@ -287,7 +261,31 @@
             <p>
                 Contanos por WhatsApp qué versión preferís al confirmar tu pedido.
             </p>
-
+            <h2>Envíos, plazos y cambios</h2>
+            
+            <ul>
+                <li>
+                    <strong>Montevideo:</strong> envío gratis en todo Montevideo.
+                    Coordinamos la entrega en un punto público de encuentro
+                    (por ejemplo, Tres Cruces o un centro comercial), en 24 o 48 horas.
+                </li>
+            
+                <li>
+                    <strong>Interior del país:</strong> envío por la agencia que elijas,
+                    con costo a cargo del cliente.
+                </li>
+            
+                <li>
+                    <strong>Preparación:</strong> 24 horas si hay stock.
+                    Si es por encargo, entre 10 y 15 días hábiles.
+                    Para pedidos de varias unidades, consúltanos el plazo.
+                </li>
+            
+                <li>
+                    <strong>Cambios:</strong> no realizamos devoluciones.
+                    Si tu pedido llega con una falla de nuestra parte, lo sustituimos.
+                </li>
+            </ul>
 
             <div class="ayuda-venta">
 
