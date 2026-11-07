@@ -195,16 +195,19 @@ p {
 /* ==========================================================================
    5. HERO
    ========================================================================== */
+/* ==========================================================================
+   5. HERO (CORREGIDO PARA MOBILE)
+   ========================================================================== */
 .hero-content {
     position: relative;
-    min-height: 90vh;
+    min-height: 85vh;
     width: 100%;
     overflow: hidden;
-    aspect-ratio: 16 / 9;
-    /* así se ve la foto entera */
+    display: flex;
+    align-items: flex-end;
+    /* Manda el contenido abajo para que la foto se luzca arriba */
 }
 
-/* El <picture> ocupa todo el contenedor como fondo */
 .hero-content picture {
     position: absolute;
     inset: 0;
@@ -219,91 +222,69 @@ p {
     object-position: center;
 }
 
-/* Capa oscura sobre la imagen */
+/* Eliminamos el recuadro flotante oscuro y usamos un degradado inferior limpio */
 .hero-content::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom,
-            rgba(0, 0, 0, .45),
-            rgba(0, 0, 0, .20),
-            rgba(0, 0, 0, .05));
+    background: linear-gradient(to top, rgba(24, 8, 45, 0.95) 0%, rgba(24, 8, 45, 0.6) 50%, transparent 100%);
+    z-index: 1;
 }
 
-/* Contenido encima de la imagen */
 .hero-texto {
     position: relative;
     z-index: 2;
-    min-height: 90vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    gap: 1rem;
     text-align: center;
-    padding: var(--space-md) var(--space-sm);
+    padding: 30px 16px 40px 16px;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.hero-texto-contenido {
+    position: static;
+    /* Quitamos el translateY negativo que rompía todo */
+    background: transparent;
+    /* Sin cajas flotantes que tapen la foto */
+    backdrop-filter: none;
+    padding: 0;
+    max-width: 650px;
+    transform: none;
+}
+
+.hero-texto h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+    color: var(--blanco);
+    margin-bottom: 0.5rem;
 }
 
 .hero-texto .dorado {
     color: var(--dorado-principal);
-    font-size: 1.3rem;
-    max-width: 32rem;
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
 }
 
-.hero-texto-contenido {
-    position: relative;
-    
-    background: rgba(24, 2, 53, 0.28);
-    backdrop-filter: blur(8px);
-    padding: 2rem;
-    border-radius: 20px;
-    max-width: 650px;
-    transform: translateY(-70px);
-}
-
 .cta-button {
-    margin-top: -20px;
+    margin-top: 0;
+    /* Botón ordenado y pegado al texto sin saltos raros */
     display: inline-block;
-    padding: 0.9rem 2.2rem;
+    padding: 0.8rem 2rem;
     background-color: var(--dorado-principal);
     color: var(--fondo-Noche);
     border: 1px solid var(--dorado-principal);
     border-radius: 4rem;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    font-family: var(--font-sans);
     text-decoration: none;
     cursor: pointer;
-    will-change: transform;
     animation: pulsar 2.5s infinite ease-in-out;
-    transition: transform var(--transition-base), box-shadow var(--transition-base), background-color var(--transition-base);
 }
-
-.cta-button:hover,
-.cta-button:focus-visible {
-    background-color: var(--dorado-suave);
-    transform: translateY(-2px) scale(1.03);
-    box-shadow: 0 6px 18px rgba(227, 182, 96, 0.4);
-}
-
-/* Animación optimizada para GPU (sustituye el uso de filter) */
-@keyframes pulsar {
-
-    0%,
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-
-    50% {
-        transform: scale(1.04);
-        opacity: 0.95;
-    }
-}
-
 /* ==========================================================================
    6. SECCIONES Y PRODUCTOS
    ========================================================================== */
@@ -676,6 +657,7 @@ summary {
 .faq-item--fijo {
     order: 2;
 }
+
 /* ==========================================================================
    8. FOOTER
    ========================================================================== */
@@ -1277,6 +1259,7 @@ footer>img:active {
         max-height: 90vh;
     }
 }
+
 /* Botones CTA compactos y centrados */
 .btn-mistico {
     width: fit-content;
@@ -1288,130 +1271,107 @@ footer>img:active {
 
 
 
-/* ===== TABLA COMPARATIVA MYSTIC BOX ===== */
-.tabla-comparativa-wrapper {
-    margin: 2rem auto 3rem;
-    max-width: 900px;
-    overflow-x: auto;
-}
-
-.tabla-mystic-box {
-    width: 100%;
-    border-collapse: collapse;
-    font-family: var(--font-sans);
-    background-color: var(--color-uvaCosmos);
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid rgba(227, 182, 96, 0.15);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
-}
-
-.tabla-mystic-box caption.visually-hidden {
+/* ===== ELEGIR MYSTIC BOX POR INTENCIÓN O PIEDRA ===== */
+.visually-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
+    margin: -1px;
+    padding: 0;
     overflow: hidden;
-    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
 }
 
-.tabla-mystic-box th,
-.tabla-mystic-box td {
-    padding: 0.9rem 1rem;
-    text-align: left;
-    border-bottom: 1px solid rgba(227, 182, 96, 0.15);
+.elegir-box {
+    max-width: 900px;
+    margin: 2rem auto 3rem;
 }
 
-.tabla-mystic-box thead th {
-    background-color: var(--violeta-Abismo);
-    color: var(--blanco);
-    font-family: var(--font-serif);
+.elegir-box__titulo {
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.elegir-box__subtitulo {
+    text-align: center;
+    margin: 0.25rem 0 1.25rem;
+}
+
+.elegir-box__lista {
+    --gap: 0.75rem;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--gap);
+}
+
+.elegir-box__lista li {
+    display: flex;
+    flex: 0 1 calc(50% - var(--gap) / 2);
+    min-width: 0;
+}
+
+.elegir-box__lista li:last-child {
+    flex-basis: 100%;
+}
+
+.elegir-box__item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.85rem 0.9rem;
+    text-align: center;
+    background-color: var(--color-uvaCosmos);
+    border: 1px solid rgba(227, 182, 96, 0.15);
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+    overflow-wrap: break-word;
+    transition: transform var(--transition-base), background-color var(--transition-base), border-color var(--transition-base);
+}
+
+.elegir-box__item:focus-visible {
+    outline: 2px solid var(--dorado-principal);
+    outline-offset: 2px;
+}
+
+@media (hover: hover) {
+    .elegir-box__item:hover {
+        transform: translateY(-2px);
+        background-color: var(--color-uva-hover);
+        border-color: var(--dorado-principal);
+    }
+}
+
+.elegir-box__intencion {
     font-weight: 700;
     font-size: 0.95rem;
-    letter-spacing: 0.5px;
+    line-height: 1.25;
+    color: var(--blanco);
 }
 
-.tabla-mystic-box tbody th[scope="row"] {
-    font-family: var(--font-serif);
+.elegir-box__piedra {
+    font-size: 0.85rem;
+    line-height: 1.3;
+    color: var(--dorado-suave);
+}
+
+.elegir-box__datos {
+    margin-top: auto;
+    padding-top: 0.35rem;
+    font-size: 0.85rem;
     font-weight: 700;
     color: var(--dorado-principal);
 }
 
-.tabla-mystic-box tbody td {
-    color: var(--dorado-suave);
-    font-size: 0.9rem;
-}
+@media (min-width: 768px) {
 
-.tabla-mystic-box tbody tr:hover {
-    background-color: var(--color-uva-hover);
-}
-
-.tabla-mystic-box tbody tr:last-child td,
-.tabla-mystic-box tbody tr:last-child th {
-    border-bottom: none;
-}
-
-.link-tabla {
-    color: var(--dorado-principal);
-    font-weight: 700;
-    text-decoration: none;
-    white-space: nowrap;
-    transition: color var(--transition-base);
-}
-
-.link-tabla:hover,
-.link-tabla:focus-visible {
-    color: var(--dorado-suave);
-    text-decoration: underline;
-}
-
-/* ===== MOBILE: tabla se convierte en tarjetas apiladas ===== */
-@media (max-width: 640px) {
-    .tabla-mystic-box thead {
-        display: none;
-    }
-
-    .tabla-mystic-box,
-    .tabla-mystic-box tbody,
-    .tabla-mystic-box tr,
-    .tabla-mystic-box td,
-    .tabla-mystic-box th {
-        display: block;
-        width: 100%;
-    }
-
-    .tabla-mystic-box tr {
-        margin-bottom: 1rem;
-        border-radius: 10px;
-        border: 1px solid rgba(227, 182, 96, 0.2);
-        overflow: hidden;
-    }
-
-    .tabla-mystic-box tbody th[scope="row"] {
-        background-color: var(--violeta-Abismo);
-        color: var(--dorado-principal);
-        font-size: 1.05rem;
-        padding: 0.8rem 1rem;
-        border-bottom: none;
-    }
-
-    .tabla-mystic-box td {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid rgba(227, 182, 96, 0.1);
-    }
-
-    .tabla-mystic-box td[data-label]:not([data-label=""])::before {
-        content: attr(data-label);
-        font-weight: 700;
-        color: var(--dorado-principal);
-        margin-right: 1rem;
-    }
-
-    .tabla-mystic-box td:last-child {
-        justify-content: center;
-        border-bottom: none;
-        padding: 1rem;
+    .elegir-box__lista li,
+    .elegir-box__lista li:last-child {
+        flex-basis: calc(25% - var(--gap) * 0.75);
     }
 }
 
